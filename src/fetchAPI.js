@@ -26,7 +26,7 @@ export const GetLink = async () => {
     const data = await request.json();
 
     console.log(data.trivia_categories);
-    console.log(data.trivia_categories[2]);
+    // console.log(data.trivia_categories[2]);
     return data.trivia_categories;
 };
 
