@@ -1,15 +1,65 @@
-import React from "react";
+import React, {useState} from "react";
+import PropTypes from 'prop-types';
+import {CreateButton} from "../QuestionCard/CreateButton";
+import WelcomePage from "../WelcomePage/WelcomePage";
 
-export const ShowQuestions = ({questionData, data, method}) => {
-    return (
-        questionData.map((item) =>
-            item.results.map((element, index) =>
-                <div key={`Create list-${index}`}>
-                    <p>Question {index + 1} / {item.results.length}</p>
-                    <p><strong>{element.question}</strong></p>
-                    <div>{method(data[index], index)}</div>
+function ShowQuestions ({questionData, data, method, userAnswers, correctAnswers}) {
+    const [hideStatistics, setHideStatistics] = useState(false);
+
+    function showMessage() {
+        setHideStatistics(true);
+    }
+
+    function showAnswers() {
+        let content =  (
+            <div>
+                {questionData.map((item) =>
+                    item.results.map((element, index) =>
+                        <div key={`Create list-${index}`} className={'user-answers'}>
+                            <p>
+                                Question {index + 1} / {item.results.length}
+                            </p>
+                            <p>
+                                <strong>
+                                    {element.question}
+                                </strong>
+                            </p>
+                            <div>
+                                {method(data[index], index, userAnswers, correctAnswers)}
+                            </div>
+                        </div>
+                    )
+                )}
+                <div className={'answers-back-home-button'}>
+                    <CreateButton method={showMessage} className={'custom-btn'} txt={'Back to menu'}/>
                 </div>
-            )
+            </div>
+
+
+        );
+
+        let hideStats = hideStatistics ? <WelcomePage /> : content;
+
+        return (
+            <div>
+                {hideStats}
+            </div>
         )
+    }
+
+    return (
+        <div>
+            {showAnswers()}
+        </div>
     )
+}
+
+export default ShowQuestions;
+
+ShowQuestions.propTypes = {
+    questionData: PropTypes.array,
+    data: PropTypes.array,
+    method: PropTypes.func,
+    userAnswers: PropTypes.array,
+    correctAnswers: PropTypes.array,
 };

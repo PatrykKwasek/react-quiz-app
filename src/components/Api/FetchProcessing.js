@@ -1,6 +1,6 @@
 import React from "react";
 import {UploadAPI} from "../../fetchAPI";
-import QuestionCard from "../QuestionCard";
+import QuestionCard from "../QuestionCard/QuestionCard";
 
 class FetchProcessing extends React.Component {
     constructor(props) {
@@ -12,11 +12,11 @@ class FetchProcessing extends React.Component {
             difficulty: this.props.difficulty,
         };
 
-        console.log('FetchProcessing - constructor');
+        // console.log('FetchProcessing - constructor');
     }
 
     componentDidMount() {
-        console.log('FetchProcessing - componentDidMount');
+        // console.log('FetchProcessing - componentDidMount');
         UploadAPI().then(data => this.setState({
             questions: [data],
         }))
@@ -42,13 +42,13 @@ class FetchProcessing extends React.Component {
     };
 
     render() {
-        console.log('FetchProcessing - render');
+        // console.log('FetchProcessing - render');
 
         return (
             <div>
                 {/*{this.displayState()}*/}
                 {this.state.questions !== [] && this.displayQuiz()}
-                {console.log(this.state.questions)}
+                {/*{console.log(this.state.questions)}*/}
             </div>
         )
     }

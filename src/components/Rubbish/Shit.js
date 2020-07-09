@@ -1,84 +1,130 @@
 // import React from "react";
 // import '../styles/styles.css'
-// import QuizStats from "./QuizStats";
-// import WelcomeMessage from "./WelcomeMessage";
+// import UserResult from "./UserResult/UserResult";
+// import WelcomeMessage from "./WelcomePage/WelcomeMessage";
 //
-// export default class QuestionCard extends React.Component {
-//     constructor(props) {
-//         super(props);
-//         this.state = {
-//             questionData: this.props.version,
-//             activeIndex: 0,
-//             hideQuestion: false,
-//             displayStatistics: false,
-//             userAnswersArrayResult: [],
-//             userAnswer: '',
-//             displayWelcomeMessage: false,
-//             buttonActivity: true,
-//             buttonIdsArray: ["button1", "button2", "button3", "button4"],
-//             chooseQuestion: [],
-//             buttonClicked: '',
-//         };
+// const joinAnswers = (obj) => {
+//     let joinedAnswers = [];
+//     let correctAnswer = obj.correct_answer;
+//     let incorrectAnswers = obj.incorrect_answers;
+//
+//     joinedAnswers.push(correctAnswer);
+//     for (let i = 0; i < incorrectAnswers.length; i++) {
+//         joinedAnswers.push(incorrectAnswers[i]);
 //     }
 //
-//     componentDidMount() {
-//         let {questionData} = this.state;
+//     return joinedAnswers;
+// };
 //
-//         let example = questionData[0].results[0];
-//         let shuffledQuestion = this.shuffleAnswersTable(this.joinAnswers(example));
+// const shuffleAnswersTable = (tab) => {
+//     let arr = tab.slice();
+//     let shuffledArray = ['A. ', 'B. ', 'C. ', 'D. '];
 //
-//         this.setState({
-//             chooseQuestion: shuffledQuestion,
-//         });
-//
-//         console.log('componentDidMount');
-//     }
-//
-//     joinAnswers = (obj) => {
-//         let joinedAnswers = [];
-//         let correctAnswer = obj.correct_answer;
-//         let incorrectAnswers = obj.incorrect_answers;
-//
-//         joinedAnswers.push(correctAnswer);
-//         for (let i = 0; i < incorrectAnswers.length; i++) {
-//             joinedAnswers.push(incorrectAnswers[i]);
-//         }
-//
-//         return joinedAnswers;
-//     };
-//
-//     shuffleAnswersTable = (tab) => {
-//         let arr = tab.slice();
-//         let shuffledArray = ['A. ', 'B. ', 'C. ', 'D. '];
-//
-//         for (let i = arr.length; i > 0; i--) {
-//             let randomDigit = Math.floor(Math.random() * i);
-//             let index = arr.indexOf(arr[randomDigit]);
-//             if (arr[index] === undefined) {
-//                 if (shuffledArray.indexOf(arr[index]) !== -1) {
-//                     shuffledArray[i-1] = shuffledArray[i-1] + arr[index];
-//                 }
-//             } else {
+//     for (let i = arr.length; i > 0; i--) {
+//         let randomDigit = Math.floor(Math.random() * i);
+//         let index = arr.indexOf(arr[randomDigit]);
+//         if (arr[index] === undefined) {
+//             if (shuffledArray.indexOf(arr[index]) !== -1) {
 //                 shuffledArray[i-1] = shuffledArray[i-1] + arr[index];
 //             }
-//
-//             arr.splice(index, 1);
+//         } else {
+//             shuffledArray[i-1] = shuffledArray[i-1] + arr[index];
 //         }
 //
-//         return shuffledArray;
+//         arr.splice(index, 1);
+//     }
+//
+//     return shuffledArray;
+// };
+//
+// const CreateBackMenuButton = ({method, className, txt}) => {
+//     return (
+//         <button
+//             onClick={method}
+//             className={className}
+//         >
+//             {txt}
+//         </button>
+//     )
+// };
+//
+// class QuestionCard extends React.Component {
+//     state = {
+//         questionData: this.props.version,
+//         activeIndex: 0,
+//         userAnswersArrayResult: [],
+//         userAnswer: '',
+//         questionsTable: [],
+//         buttonClicked: '',
+//         chosenAnswers: [],
+//         correct: [],
+//         shuffledAnswers: [],
+//         hideQuestion: false,
+//         displayStatistics: false,
+//         displayWelcomeMessage: false,
 //     };
 //
-//     checkAnswerCorrectness = () => {
-//         let questionsData = this.state.questionData;
-//         const {activeIndex, userAnswer, userAnswersArrayResult} = this.state;
+//     componentDidMount() {
+//         let {version} = this.props;
 //
-//         let checkAnswerCorrectness = (userAnswer === questionsData[0].results[activeIndex].correct_answer) ?
+//         console.log('Version ', version);
+//
+//         let getFirstObjectElement = version[0].results[0];
+//         let questionsTable = this.shuffleAnswersTable(this.joinAnswers(getFirstObjectElement));
+//
+//         this.setState({
+//             questionsTable,
+//             questionData: version,
+//         });
+//     }
+//
+//     // joinAnswers = (obj) => {
+//     //     let joinedAnswers = [];
+//     //     let correctAnswer = obj.correct_answer;
+//     //     let incorrectAnswers = obj.incorrect_answers;
+//     //
+//     //     joinedAnswers.push(correctAnswer);
+//     //     for (let i = 0; i < incorrectAnswers.length; i++) {
+//     //         joinedAnswers.push(incorrectAnswers[i]);
+//     //     }
+//     //
+//     //     return joinedAnswers;
+//     // };
+//     //
+//     // shuffleAnswersTable = (tab) => {
+//     //     let arr = tab.slice();
+//     //     let shuffledArray = ['A. ', 'B. ', 'C. ', 'D. '];
+//     //
+//     //     for (let i = arr.length; i > 0; i--) {
+//     //         let randomDigit = Math.floor(Math.random() * i);
+//     //         let index = arr.indexOf(arr[randomDigit]);
+//     //         if (arr[index] === undefined) {
+//     //             if (shuffledArray.indexOf(arr[index]) !== -1) {
+//     //                 shuffledArray[i-1] = shuffledArray[i-1] + arr[index];
+//     //             }
+//     //         } else {
+//     //             shuffledArray[i-1] = shuffledArray[i-1] + arr[index];
+//     //         }
+//     //
+//     //         arr.splice(index, 1);
+//     //     }
+//     //
+//     //     return shuffledArray;
+//     // };
+//
+//     checkAnswerCorrectness = () => {
+//         const {questionData, activeIndex, userAnswer, userAnswersArrayResult} = this.state;
+//
+//         let checkAnswerCorrectness = (userAnswer === questionData[0].results[activeIndex].correct_answer) ?
 //             userAnswersArrayResult.concat(1):
 //             userAnswersArrayResult.concat(0);
 //
 //         this.setState({
 //             userAnswersArrayResult: checkAnswerCorrectness,
 //             userAnswer: '',
+//             chosenAnswers: this.state.chosenAnswers.concat(userAnswer),
+//             correct: this.state.correct.concat(this.state.questionData[0].results[activeIndex].correct_answer),
+//             shuffledAnswers: this.state.shuffledAnswers.concat([this.state.questionsTable]),
 //         });
 //     };
 //
@@ -101,9 +147,8 @@
 //     handleNextQuestion = () => {
 //         let {activeIndex, questionData} = this.state;
 //
-//         let example = questionData[0].results[activeIndex + 1];
-//         let shuffledQuestion = this.shuffleAnswersTable(this.joinAnswers(example));
-//         console.log(`Question - ${activeIndex + 1} : ${shuffledQuestion}`);
+//         let getFirstObjectElement = questionData[0].results[activeIndex + 1];
+//         let questionsTable = this.shuffleAnswersTable(this.joinAnswers(getFirstObjectElement));
 //
 //         this.checkAnswerCorrectness();
 //
@@ -115,33 +160,29 @@
 //
 //         this.setState({
 //             activeIndex,
-//             chooseQuestion: shuffledQuestion,
-//             buttonActivity: true,
+//             questionsTable,
 //             buttonClicked: '',
 //         });
 //     };
 //
-//     //NEW COMPONENT
 //     checkAnswer = (e, id) => {
 //         e.preventDefault();
 //         let clickedAnswer = e.target.innerText.slice(3);
 //
 //         this.setState({
 //             userAnswer: clickedAnswer,
-//             buttonActivity: false,
 //             buttonClicked: id,
 //         });
 //     };
 //
-//     //NEW COMPONENT WITHIN createQuestionsList
 //     answersList = () => {
-//         let tableOfAnswers = this.state.chooseQuestion;
-//         const {buttonActivity, buttonClicked} = this.state;
+//         const {questionsTable, buttonClicked} = this.state;
 //
 //         return (
-//             tableOfAnswers.map((item, index) => {
+//             questionsTable.map((item, index) => {
 //                     let id = `button${index + 1}`;
-//                     let className = buttonClicked === id ? "clicked-button" : buttonActivity ? "active-button" : "inactive-button"; //IF - ELSE
+//                     let className = (buttonClicked === id) ? "clicked-button" : "inactive-button";
+//
 //                     return (
 //                         <p key={`Answers list-${index}`}>
 //                             <button
@@ -170,6 +211,8 @@
 //             )
 //         );
 //
+//         console.log(questionData);
+//
 //         let numberOfQuestions = data.length;
 //         let correctAnswers = userAnswersArrayResult.filter((item) => (item === 1)).length;
 //         let quizResult = (correctAnswers / data.length) >= 0.5 ?
@@ -185,7 +228,10 @@
 //         let content = (
 //             <div key={`Create list-${activeIndex}`}>
 //                 <p>
-//                     <button onClick={this.showStartMenu} className={'btn'}>BACK TO MENU</button>
+//                     <CreateBackMenuButton
+//                         method={this.showStartMenu}
+//                         className={'btn'}
+//                         txt={'BACK TO MENU'}/>
 //                 </p>
 //                 <p>Question {activeIndex + 1} / {data.length}</p>
 //                 <p>
@@ -197,11 +243,6 @@
 //                 </div>
 //
 //                 <div>
-//                     {/*<p>{`Correct answer:  ${data[activeIndex].correct_answer}`}</p>*/}
-//                     {/*<p>{`User answer:  `}<strong>{userAnswer}</strong></p>*/}
-//                 </div>
-//
-//                 <div>
 //                     <p>{appropriateButton}</p>
 //                 </div>
 //             </div>
@@ -210,10 +251,13 @@
 //         let welcomeMessage = displayWelcomeMessage ? <WelcomeMessage /> : '';
 //         let message = hideQuestion ? '' : content;
 //         let question = displayStatistics ?
-//             <QuizStats
+//             <UserResult
 //                 result={quizResult}
 //                 numberOfQuestions={numberOfQuestions}
 //                 correctAnswers={correctAnswers}
+//                 chosenAnswers={this.state.chosenAnswers}
+//                 correct={this.state.correct}
+//                 shuffledAnswers={this.state.shuffledAnswers}
 //                 sendInfo={this.state.questionData}/> :
 //             '';
 //
@@ -229,8 +273,10 @@
 //     render() {
 //         return (
 //             <div>
-//                 {this.createQuestionsList(this.state.questionData)}
+//                 {this.state.questionData.length !== 0 && this.createQuestionsList(this.state.questionData)}
 //             </div>
 //         )
 //     }
 // }
+//
+// export default QuestionCard;

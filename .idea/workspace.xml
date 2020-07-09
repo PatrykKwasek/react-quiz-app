@@ -1,9 +1,239 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cdc8fdfa-e22d-4784-a0ad-e5151dcda388" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Api/FetchProcessing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Api/FetchProcessing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/QuestionCard/AnswersList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuestionCard/AnswersList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/QuestionCard/CreateAnswerButtons.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuestionCard/CreateAnswerButtons.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/QuestionCard/CreateButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuestionCard/CreateButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/QuestionCard/QuestionCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuestionCard/QuestionCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/QuestionCard/methods.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuestionCard/methods.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/QuizForm/CreateCategorySelectTypeInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuizForm/CreateCategorySelectTypeInput.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/QuizForm/CreateDifficultySelectTypeInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuizForm/CreateDifficultySelectTypeInput.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/QuizForm/CreateInputLabel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuizForm/CreateInputLabel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/QuizForm/CreateNumberTypeInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuizForm/CreateNumberTypeInput.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/QuizForm/Example.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuizForm/Example.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/QuizForm/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuizForm/Form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Rubbish/Shit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Rubbish/Shit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UserAnswers/CheckAnswersCorrectness.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserAnswers/CheckAnswersCorrectness.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UserAnswers/ShowQuestions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserAnswers/ShowQuestions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UserAnswers/UserAnswers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserAnswers/UserAnswers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UserResult/UserResult.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserResult/UserResult.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UserResult/UserResult.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserResult/UserResult.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/WelcomePage/CreateButtonList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WelcomePage/CreateButtonList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/WelcomePage/MainPageContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WelcomePage/MainPageContent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/WelcomePage/WelcomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WelcomePage/WelcomePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/WelcomePage/buttonsData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WelcomePage/buttonsData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sda.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/category/books/booksData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/category/books/booksData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/category/general/generalKnowledge.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/category/general/generalKnowledge.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/category/geography/geographyData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/category/geography/geographyData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/category/geopraphy/geographyData.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/category/history/historyData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/category/history/historyData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/category/science/computers/exampleData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/category/science/computers/exampleData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/category/science/mathematics/mathData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/category/science/mathematics/mathData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/category/sport/sportData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/category/sport/sportData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fetchAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/fetchAPI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/styles.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1ZAhzjNYGXpHf0CH0n5ULD9HYid" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path" value="$APPLICATION_CONFIG_DIR$/node/node-v12.13.1-win-x64/node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\React\react-projects\src\components\Rubbish" />
+      <recent name="C:\React\react-projects\src\components" />
+      <recent name="C:\React\react-projects\src\components\MainPage" />
+      <recent name="C:\React\react-projects\src\components\fetch" />
+      <recent name="C:\React\react-projects\src\data\category\science\computers" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.npm start">
+    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="npm start" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cdc8fdfa-e22d-4784-a0ad-e5151dcda388" name="Default Changelist" comment="" />
+      <created>1584288069515</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584288069515</updated>
+      <workItem from="1584288072982" duration="28955000" />
+      <workItem from="1584391297143" duration="2766000" />
+      <workItem from="1584458858483" duration="11000" />
+      <workItem from="1584474298190" duration="9046000" />
+      <workItem from="1584649787692" duration="1928000" />
+      <workItem from="1584733650224" duration="40074000" />
+      <workItem from="1586977744208" duration="15868000" />
+      <workItem from="1587113606915" duration="119422000" />
+      <workItem from="1588246329804" duration="40788000" />
+      <workItem from="1588748599570" duration="75407000" />
+      <workItem from="1589551025897" duration="31000" />
+      <workItem from="1589557453937" duration="37075000" />
+      <workItem from="1589899120689" duration="34636000" />
+      <workItem from="1590394508933" duration="658000" />
+      <workItem from="1590484357090" duration="83794000" />
+      <workItem from="1591047205246" duration="4764000" />
+      <workItem from="1591106786403" duration="324000" />
+      <workItem from="1591183459359" duration="3707000" />
+      <workItem from="1591344025143" duration="9491000" />
+      <workItem from="1591610242333" duration="1335000" />
+      <workItem from="1591744394995" duration="38785000" />
+      <workItem from="1592004408591" duration="33796000" />
+      <workItem from="1593888921249" duration="13455000" />
+      <workItem from="1593972328969" duration="6244000" />
+      <workItem from="1594294457681" duration="975000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="-901" key="#Deployment" timestamp="1592295573004">
+      <screen x="0" y="-1080" width="1920" height="1040" />
+    </state>
+    <state x="552" y="-901" key="#Deployment/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1592295573004" />
+    <state x="72" y="-898" key="#ESLint" timestamp="1589557584563">
+      <screen x="0" y="-1080" width="1920" height="1040" />
+    </state>
+    <state x="72" y="-898" key="#ESLint/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1589557584563" />
+    <state x="236" y="-752" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589645921858">
+      <screen x="0" y="-1080" width="1920" height="1040" />
+    </state>
+    <state x="236" y="-752" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1589645921858" />
+    <state x="493" y="172" key="FileChooserDialogImpl" timestamp="1593979849584">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="739" y="-817" key="FileChooserDialogImpl/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1592295581313" />
+    <state x="493" y="172" key="FileChooserDialogImpl/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1593979849584" />
+    <state x="493" y="172" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1588075407937" />
+    <state width="1877" height="274" key="GridCell.Tab.0.bottom" timestamp="1594294571202">
+      <screen x="0" y="-1080" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="274" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1594294571202" />
+    <state width="1237" height="159" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1594286577041" />
+    <state width="897" height="273" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1590331604237" />
+    <state width="1877" height="274" key="GridCell.Tab.0.center" timestamp="1594294571202">
+      <screen x="0" y="-1080" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="274" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1594294571202" />
+    <state width="1237" height="159" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1594286577041" />
+    <state width="897" height="273" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1590331604235" />
+    <state width="1877" height="274" key="GridCell.Tab.0.left" timestamp="1594294571201">
+      <screen x="0" y="-1080" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="274" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1594294571201" />
+    <state width="1237" height="159" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1594286577040" />
+    <state width="897" height="273" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1590331604230" />
+    <state width="1877" height="274" key="GridCell.Tab.0.right" timestamp="1594294571202">
+      <screen x="0" y="-1080" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="274" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1594294571202" />
+    <state width="1237" height="159" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1594286577041" />
+    <state width="897" height="273" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1590331604235" />
+    <state x="437" y="226" key="com.intellij.ide.util.TipDialog" timestamp="1593972336159">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="656" y="-735" key="com.intellij.ide.util.TipDialog/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1592004417268" />
+    <state x="437" y="226" key="com.intellij.ide.util.TipDialog/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1593972336159" />
+    <state x="112" y="-296" key="run.anything.popup" timestamp="1593954708193">
+      <screen x="0" y="-1080" width="1920" height="1040" />
+    </state>
+    <state x="112" y="-296" key="run.anything.popup/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1593954708193" />
+    <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup" timestamp="1591782821590">
+      <screen x="0" y="-1080" width="1920" height="1040" />
+    </state>
+    <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1591782821590" />
   </component>
 </project>

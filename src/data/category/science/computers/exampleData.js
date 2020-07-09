@@ -27,7 +27,7 @@ const exampleData = [
             {"category":"Science: Computers",
                 "type":"multiple",
                 "difficulty":"medium",
-                "question":"Nvidia&#039;s headquarters are based in which Silicon Valley city?",
+                "question":"Nvidia's headquarters are based in which Silicon Valley city?",
                 "correct_answer":"Santa Clara",
                 "incorrect_answers":["Palo Alto","Cupertino","Mountain View"]},
             {"category":"Science: Computers",
