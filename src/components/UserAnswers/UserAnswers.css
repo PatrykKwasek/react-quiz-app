@@ -1,0 +1,64 @@
+.custom, .correct-answer, .incorrect-answer {
+    width: 100%;
+}
+
+.correct-answer {
+    background-color: green;
+    color: white;
+    text-align: left;
+}
+
+.incorrect-answer {
+    background-color: red;
+    color: white;
+    text-align: left;
+}
+
+.custom {
+    text-align: left;
+}
+
+.answers-back-home-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+}
+
+.user-answers {
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media screen and (min-width: 425px) {
+    .custom, .correct-answer, .incorrect-answer {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .question-card {
+        width: 80%;
+        margin: 150px auto;
+    }
+
+    .correct-answer {
+        width: 500px;
+    }
+
+    .incorrect-answer {
+        width: 500px;
+    }
+
+    .custom {
+        width: 500px;
+    }
+
+    .user-answers {
+        width: 80%;
+    }
+
+    .user-answers:not(:last-child) {
+        margin-bottom: 30px;
+    }
+}

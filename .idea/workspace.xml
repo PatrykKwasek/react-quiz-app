@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdc8fdfa-e22d-4784-a0ad-e5151dcda388" name="Default Changelist" comment="" />
+    <list default="true" id="cdc8fdfa-e22d-4784-a0ad-e5151dcda388" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/QuizForm/Form.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UserAnswers/UserAnswers.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WelcomePage/WelcomePage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/QuizForm/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuizForm/Form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UserAnswers/UserAnswers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserAnswers/UserAnswers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UserResult/UserResult.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserResult/UserResult.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UserResult/UserResult.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserResult/UserResult.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/WelcomePage/WelcomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WelcomePage/WelcomePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/category/geography/geographyData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/category/geography/geographyData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/styles.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -128,7 +140,7 @@
       <workItem from="1592004408591" duration="33796000" />
       <workItem from="1593888921249" duration="13455000" />
       <workItem from="1593972328969" duration="6244000" />
-      <workItem from="1594294457681" duration="3215000" />
+      <workItem from="1594294457681" duration="12369000" />
     </task>
     <servers />
   </component>

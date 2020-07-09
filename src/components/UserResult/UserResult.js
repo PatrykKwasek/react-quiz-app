@@ -4,7 +4,7 @@ import WelcomePage from "../WelcomePage/WelcomePage";
 import QuestionCard from "../QuestionCard/QuestionCard";
 import UserAnswers from "../UserAnswers/UserAnswers";
 import {CreateButton} from "../QuestionCard/CreateButton";
-// import './UserResult.css';
+import './UserResult.css';
 
 function UserResult({sendInfo, chosenAnswers, correct, shuffledAnswers, result, correctAnswers, numberOfQuestions}) {
     const [displayWelcomeMessage, setDisplayWelcomeMessage] = useState(false);

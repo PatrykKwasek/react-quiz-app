@@ -1,3 +1,32 @@
-.myBody {
-    background-color: green;
+.result-heading,
+.result-paragraph-verdict,
+.result-user-score {
+    text-align: center;
+}
+
+.result-heading {
+    font-size: 6vw;
+}
+
+.result-buttons {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+    margin: 0 auto;
+    grid-row-gap: 10px;
+}
+
+.user-result-container {
+    width: 80%;
+    margin: 150px auto;
+}
+
+.custom-btn {
+    height: 30px;
+}
+
+@media screen and (min-width: 768px) {
+    .result-buttons {
+        width: 260px;
+    }
 }

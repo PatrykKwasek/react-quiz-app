@@ -7,6 +7,7 @@ import {CreateButton} from "../QuestionCard/CreateButton";
 import FetchProcessing from "../Api/FetchProcessing";
 import {GetCategories} from "../../fetchAPI";
 import WelcomePage from "../WelcomePage/WelcomePage";
+import './Form.css';
 
 function Form() {
     const [questionNumber, setQuestionNumber] = useState(10);

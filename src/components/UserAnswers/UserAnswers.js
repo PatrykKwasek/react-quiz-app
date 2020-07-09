@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from 'prop-types';
 import {CheckAnswersCorrectness} from "./CheckAnswersCorrectness";
 import ShowQuestions from "./ShowQuestions";
+import './UserAnswers.css';
 
 const UserAnswers = ({questionDb, answers, correctness, shuffleData}) => {
     return (

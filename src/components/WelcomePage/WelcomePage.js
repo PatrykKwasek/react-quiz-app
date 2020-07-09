@@ -4,6 +4,7 @@ import Form from "../QuizForm/Form";
 import buttonsData from "./buttonsData";
 import {MainPageContent} from "./MainPageContent";
 import Example from "../QuizForm/Example";
+import './WelcomePage.css';
 import {GetCategories, GetLink} from "../../fetchAPI";
 
 const apiData = [
@@ -67,7 +68,8 @@ function WelcomePage() {
         );
 
         let message = hideWelcomeMessage ? '' : content;
-        let quizForm = displayForm ? <Example tab={(checkResult())}/> : '';
+        // let quizForm = displayForm ? <Example tab={(checkResult())}/> : '';
+        let quizForm = displayForm ? <Form /> : '';
 
         let questions = displayQuestions ?
             <QuestionCard version={data} /> :

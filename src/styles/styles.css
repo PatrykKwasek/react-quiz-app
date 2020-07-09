@@ -7,64 +7,6 @@ body {
     background-color: #eae6e6;
 }
 
-.welcome-page-container {
-    width: 80%;
-    margin: 10% auto;
-}
-
-.welcome-page-paragraph {
-    width: 150px;
-    margin: 0 auto;
-}
-
-.welcome-page-buttons-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-row-gap: 10px;
-    width: 350px;
-    margin: 0 auto;
-}
-
-.txt-inside-btn {
-    margin: auto auto;
-}
-
-/*  REUSABLE  */
-.btn {
-    width: 150px;
-    height: 40px;
-}
-
-.welcome-page-txt-center,
-.form,
-.result-heading,
-.result-paragraph-verdict,
-.result-user-score {
-    text-align: center;
-}
-
-/*  FORM  */
-.form-label {
-    font-size: 25px;
-    display: block;
-}
-
-.form-select, .form-input {
-    width: 300px;
-    height: 30px;
-    padding-left: 10px;
-}
-
-.form-container {
-    width: 80%;
-    margin: 80px auto;
-}
-
-.form-button {
-    width: 150px;
-    height: 40px;
-}
-
 /*  QUESTION CARD  */
 .answers {
     display: grid;
@@ -116,61 +58,6 @@ body {
     background-color: lightgray;
 }
 
-/*  USER RESULT  */
-.question-card, .user-result-container {
-    width: 80%;
-    margin: 150px auto;
-}
-
-.result-buttons {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    width: 260px;
-    margin: 0 auto;
-    grid-row-gap: 10px;
-}
-
-.custom-btn {
-    height: 30px;
-}
-
-/*  USER ANSWERS  */
-.correct-answer {
-    background-color: green;
-    color: white;
-    width: 500px;
-    text-align: left;
-}
-
-.incorrect-answer {
-    background-color: red;
-    color: white;
-    width: 500px;
-    text-align: left;
-}
-
-.custom {
-    width: 500px;
-    text-align: left;
-}
-
-.answers-back-home-button {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    width: 100px;
-}
-
-.user-answers {
-    width: 80%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.user-answers:not(:last-child) {
-    margin-bottom: 30px;
-}
-
 /*  MEDIA QUERIES  */
 @media screen and (max-width: 991px) {
     .answers {
@@ -202,15 +89,6 @@ body {
     .question-card {
         width: 100%;
     }
-
-    .custom, .correct-answer, .incorrect-answer {
-        width: 380px;
-    }
-
-    .welcome-page-buttons-list {
-        grid-template-columns: repeat(1, 1fr);
-        width: 100%;
-    }
 }
 
 @media screen and (max-width: 480px) {
@@ -218,28 +96,7 @@ body {
         width: 100%;
     }
 
-    .result-buttons {
-        width: 100%;
-    }
-
-    .custom, .correct-answer, .incorrect-answer {
-        width: 100%;
-    }
-
-    .form-button, .form-select, .form-label, .form, .form-input {
-        width: 100%;
-    }
-
-    .form-container {
-        width: 100%;
-        margin: 80px auto;
-    }
-
     .appropriate-button {
-        width: 100%;
-    }
-
-    .welcome-page-paragraph, .welcome-page-container, .welcome-page-buttons-list, .txt-inside-btn, .btn {
         width: 100%;
     }
 }
