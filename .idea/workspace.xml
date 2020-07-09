@@ -2,52 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdc8fdfa-e22d-4784-a0ad-e5151dcda388" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/fetchAPI.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Api/FetchProcessing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Api/FetchProcessing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/QuestionCard/AnswersList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuestionCard/AnswersList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/QuestionCard/CreateAnswerButtons.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuestionCard/CreateAnswerButtons.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/QuestionCard/CreateButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuestionCard/CreateButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/QuestionCard/QuestionCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuestionCard/QuestionCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/QuestionCard/methods.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuestionCard/methods.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/QuizForm/CreateCategorySelectTypeInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuizForm/CreateCategorySelectTypeInput.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/QuizForm/CreateDifficultySelectTypeInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuizForm/CreateDifficultySelectTypeInput.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/QuizForm/CreateInputLabel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuizForm/CreateInputLabel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/QuizForm/CreateNumberTypeInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuizForm/CreateNumberTypeInput.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/QuizForm/Example.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuizForm/Example.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/QuizForm/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuizForm/Form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Rubbish/Shit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Rubbish/Shit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UserAnswers/CheckAnswersCorrectness.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserAnswers/CheckAnswersCorrectness.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UserAnswers/ShowQuestions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserAnswers/ShowQuestions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UserAnswers/UserAnswers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserAnswers/UserAnswers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UserResult/UserResult.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserResult/UserResult.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UserResult/UserResult.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserResult/UserResult.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/WelcomePage/CreateButtonList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WelcomePage/CreateButtonList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/WelcomePage/MainPageContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WelcomePage/MainPageContent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/WelcomePage/WelcomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WelcomePage/WelcomePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/WelcomePage/buttonsData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WelcomePage/buttonsData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sda.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/category/books/booksData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/category/books/booksData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/category/general/generalKnowledge.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/category/general/generalKnowledge.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/category/geography/geographyData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/category/geography/geographyData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/category/geopraphy/geographyData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/category/history/historyData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/category/history/historyData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/category/science/computers/exampleData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/category/science/computers/exampleData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/category/science/mathematics/mathData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/category/science/mathematics/mathData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/category/sport/sportData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/category/sport/sportData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fetchAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/fetchAPI.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,13 +34,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1ZAhzjNYGXpHf0CH0n5ULD9HYid" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
@@ -172,12 +132,15 @@
       <workItem from="1592004408591" duration="33796000" />
       <workItem from="1593888921249" duration="13455000" />
       <workItem from="1593972328969" duration="6244000" />
-      <workItem from="1594294457681" duration="975000" />
+      <workItem from="1594294457681" duration="1966000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="-901" key="#Deployment" timestamp="1592295573004">
