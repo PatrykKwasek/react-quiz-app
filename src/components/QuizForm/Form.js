@@ -4,24 +4,17 @@ import {CreateNumberTypeInput} from "./CreateNumberTypeInput";
 import {CreateCategorySelectTypeInput} from "./CreateCategorySelectTypeInput";
 import {CreateDifficultySelectTypeInput} from "./CreateDifficultySelectTypeInput";
 import {CreateButton} from "../QuestionCard/CreateButton";
-import FetchProcessing from "../Api/FetchProcessing";
-import {GetCategories} from "../../fetchAPI";
 import WelcomePage from "../WelcomePage/WelcomePage";
 import './Form.css';
+import QuestionCard from "../QuestionCard/QuestionCard";
 
-function Form() {
+function Form({categoriesData}) {
     const [questionNumber, setQuestionNumber] = useState(10);
     const [category, setCategory] = useState(0);
     const [difficulty, setDifficulty] = useState('Any Difficulty');
     const [hideForm, setHideForm] = useState(false);
     const [welcomePage, setWelcomePage] = useState(false);
     const [questionCard, setQuestionCard] = useState(false);
-
-    const submitObject = {
-        questionNumber: 10,
-        category: 5,
-        difficulty: 'medium',
-    };
 
     function handleQuestionsNumber(e) {
         setQuestionNumber(e.target.value);
@@ -35,10 +28,7 @@ function Form() {
         setDifficulty(e.target.value);
     }
 
-    function showQuestionCard(method) {
-        // const result = GetQuestionsFromCategory(questionNumber, category, difficulty);
-        console.log('TEST', method);
-
+    function showQuestionCard() {
         setHideForm(true);
         setQuestionCard(true);
     }
@@ -46,17 +36,6 @@ function Form() {
     function showWelcomePage() {
         setHideForm(true);
         setWelcomePage(true);
-    }
-
-    async function checkResult() {
-        const result = await GetCategories();
-        // console.log('Form', result[0].results[0].question);
-        console.log('Form', result);
-        return result;
-    }
-
-    function categoryChange() {
-
     }
 
     function formContent() {
@@ -73,7 +52,7 @@ function Form() {
 
                 <p>
                     <CreateInputLabel txt={'Category: '} /><br/>
-                    <CreateCategorySelectTypeInput method={handleCategory} tab={checkResult} onCategoryChange={categoryChange}/>
+                    <CreateCategorySelectTypeInput method={handleCategory} tab={categoriesData}/>
                 </p>
 
                 <p>
@@ -85,19 +64,17 @@ function Form() {
                 </p>
 
                 <p>
-                    <CreateButton method={() => showQuestionCard(submitObject)} className={'form-button'} txt={'START'}/>
+                    <CreateButton method={showQuestionCard} className={'form-button'} txt={'START'}/>
                     <CreateButton method={showWelcomePage} className={'form-button'} txt={'MENU'}/>
                 </p>
             </form>
         );
 
-        checkResult();
-
         let form = hideForm ? '' : content;
         let home = welcomePage ? <WelcomePage /> : '';
 
         let question = questionCard  ?
-            <FetchProcessing
+            <QuestionCard
                 questionNumber={questionNumber}
                 category={category}
                 difficulty={difficulty}
@@ -114,9 +91,9 @@ function Form() {
     }
 
     return (
-        <div>
+        <>
             {formContent()}
-        </div>
+        </>
     )
 }
 

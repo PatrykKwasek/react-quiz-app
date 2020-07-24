@@ -4,9 +4,9 @@ import WelcomePage from "../WelcomePage/WelcomePage";
 class App extends React.Component {
     render() {
         return (
-            <div>
+            <>
                 <WelcomePage />
-            </div>
+            </>
         )
     }
 }

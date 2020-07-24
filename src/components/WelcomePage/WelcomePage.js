@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import QuestionCard from "../QuestionCard/QuestionCard";
 import Form from "../QuizForm/Form";
 import buttonsData from "./buttonsData";
@@ -6,12 +6,7 @@ import {MainPageContent} from "./MainPageContent";
 import Example from "../QuizForm/Example";
 import './WelcomePage.css';
 import {GetCategories, GetLink} from "../../fetchAPI";
-
-const apiData = [
-    {"id":9, "name":"General Knowledge"},
-    {"id":10, "name":"Entertainment: Books"},
-    {"id":11, "name":"Entertainment: Film"}
-];
+import {func} from "prop-types";
 
 function WelcomePage() {
     const [displayQuestions, setDisplayQuestions] = useState(false);
@@ -19,10 +14,21 @@ function WelcomePage() {
     const [hideWelcomeMessage, setHideWelcomeMessage] = useState(false);
     const [data, setData] = useState('');
 
-    // useEffect(() => {
-    //     console.log('ComponentDidMount');
-    //     console.log(`displayQuestions ${displayQuestions}`)
-    // }, [displayQuestions]);
+    const [categories, setCategories] = useState([]);
+
+    useEffect(() => {
+        // async function loadCategories() {
+        //     const loadedData = await GetCategories();
+        //     setCategories(loadedData);
+        // }
+
+        loadCategories();
+    }, []);
+
+    const loadCategories = async () => {
+        const loadedCategories = await GetCategories();
+        setCategories(loadedCategories);
+    };
 
     function showMessage() {
         setDisplayQuestions(true);
@@ -39,22 +45,11 @@ function WelcomePage() {
         let result = e.target.innerText;
 
         const quiz = buttonsData.find(item => item.button === result);
+        // console.log('Quiz data', quiz.data);
 
         setData(quiz.data);
 
         showMessage();
-    }
-
-    // async function checkResult() {
-    //     return await GetCategories();
-    //     // console.log('Form', result[0].results[0].question);
-    //     // console.log('Form', result);
-    //     // return result;
-    // }
-
-    function checkResult() {
-        console.log('CheckResult');
-        return GetLink();
     }
 
     function hideWelcomeMessageDisplayQuestion() {
@@ -68,26 +63,26 @@ function WelcomePage() {
         );
 
         let message = hideWelcomeMessage ? '' : content;
-        // let quizForm = displayForm ? <Example tab={(checkResult())}/> : '';
-        let quizForm = displayForm ? <Form /> : '';
+        // let quizForm = displayForm ? <Example tab={categories}/> : '';
+        let quizForm = displayForm ? <Form categoriesData={categories}/> : '';
 
         let questions = displayQuestions ?
             <QuestionCard version={data} /> :
             '';
 
         return (
-            <div>
+            <>
                 {message}
                 {quizForm}
                 {questions}
-            </div>
+            </>
         )
     }
 
     return (
-        <div>
+        <>
             {hideWelcomeMessageDisplayQuestion()}
-        </div>
+        </>
     );
 }
 

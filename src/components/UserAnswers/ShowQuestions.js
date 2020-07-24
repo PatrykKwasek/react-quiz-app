@@ -12,7 +12,7 @@ function ShowQuestions ({questionData, data, method, userAnswers, correctAnswers
 
     function showAnswers() {
         let content =  (
-            <div>
+            <>
                 {questionData.map((item) =>
                     item.results.map((element, index) =>
                         <div key={`Create list-${index}`} className={'user-answers'}>
@@ -33,7 +33,7 @@ function ShowQuestions ({questionData, data, method, userAnswers, correctAnswers
                 <div className={'answers-back-home-button'}>
                     <CreateButton method={showMessage} className={'custom-btn'} txt={'Back to menu'}/>
                 </div>
-            </div>
+            </>
 
 
         );
@@ -41,16 +41,16 @@ function ShowQuestions ({questionData, data, method, userAnswers, correctAnswers
         let hideStats = hideStatistics ? <WelcomePage /> : content;
 
         return (
-            <div>
+            <>
                 {hideStats}
-            </div>
+            </>
         )
     }
 
     return (
-        <div>
+        <>
             {showAnswers()}
-        </div>
+        </>
     )
 }
 

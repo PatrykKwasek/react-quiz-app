@@ -6,7 +6,7 @@ import './UserAnswers.css';
 
 const UserAnswers = ({questionDb, answers, correctness, shuffleData}) => {
     return (
-        <div>
+        <>
             <ShowQuestions
                 questionData={questionDb}
                 data={shuffleData}
@@ -14,7 +14,7 @@ const UserAnswers = ({questionDb, answers, correctness, shuffleData}) => {
                 userAnswers={answers}
                 correctAnswers={correctness}
             />
-        </div>
+        </>
     )
 };
 

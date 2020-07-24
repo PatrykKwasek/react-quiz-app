@@ -58,19 +58,19 @@ function UserResult({sendInfo, chosenAnswers, correct, shuffledAnswers, result, 
             '';
 
         return (
-            <div>
+            <>
                 {hideStats}
                 {welcomeMessage}
                 {questionCard}
                 {userAnswers}
-            </div>
+            </>
         )
     }
 
     return (
-        <div>
+        <>
             {changeContent()}
-        </div>
+        </>
     )
 }
 

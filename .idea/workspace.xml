@@ -2,17 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdc8fdfa-e22d-4784-a0ad-e5151dcda388" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/QuizForm/Form.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UserAnswers/UserAnswers.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/WelcomePage/WelcomePage.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/QuestionCard/QuestionCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuestionCard/QuestionCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/QuizForm/CreateCategorySelectTypeInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuizForm/CreateCategorySelectTypeInput.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/QuizForm/CreateNumberTypeInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuizForm/CreateNumberTypeInput.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/QuizForm/Example.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuizForm/Example.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/QuizForm/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuizForm/Form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UserAnswers/ShowQuestions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserAnswers/ShowQuestions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/UserAnswers/UserAnswers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserAnswers/UserAnswers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UserResult/UserResult.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserResult/UserResult.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/UserResult/UserResult.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserResult/UserResult.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/WelcomePage/WelcomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WelcomePage/WelcomePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/category/geography/geographyData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/category/geography/geographyData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fetchAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/fetchAPI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +62,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../react-tic-tac-toe" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -140,7 +142,10 @@
       <workItem from="1592004408591" duration="33796000" />
       <workItem from="1593888921249" duration="13455000" />
       <workItem from="1593972328969" duration="6244000" />
-      <workItem from="1594294457681" duration="12369000" />
+      <workItem from="1594294457681" duration="12722000" />
+      <workItem from="1594377368279" duration="14435000" />
+      <workItem from="1595009906168" duration="22204000" />
+      <workItem from="1595364305672" duration="28588000" />
     </task>
     <servers />
   </component>
@@ -163,45 +168,46 @@
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="236" y="-752" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1589645921858" />
-    <state x="493" y="172" key="FileChooserDialogImpl" timestamp="1593979849584">
+    <state x="493" y="172" key="FileChooserDialogImpl" timestamp="1595450242898">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="739" y="-817" key="FileChooserDialogImpl/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1592295581313" />
-    <state x="493" y="172" key="FileChooserDialogImpl/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1593979849584" />
+    <state x="493" y="172" key="FileChooserDialogImpl/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1595450242898" />
     <state x="493" y="172" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1588075407937" />
-    <state width="1877" height="274" key="GridCell.Tab.0.bottom" timestamp="1594294571202">
-      <screen x="0" y="-1080" width="1920" height="1040" />
+    <state width="1237" height="157" key="GridCell.Tab.0.bottom" timestamp="1595369080678">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="274" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1594294571202" />
-    <state width="1237" height="159" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1594286577041" />
-    <state width="897" height="273" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1590331604237" />
-    <state width="1877" height="274" key="GridCell.Tab.0.center" timestamp="1594294571202">
-      <screen x="0" y="-1080" width="1920" height="1040" />
+    <state width="1237" height="157" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1595369080678" />
+    <state width="1237" height="157" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1595359252261" />
+    <state width="1237" height="157" key="GridCell.Tab.0.center" timestamp="1595369080677">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="274" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1594294571202" />
-    <state width="1237" height="159" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1594286577041" />
-    <state width="897" height="273" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1590331604235" />
-    <state width="1877" height="274" key="GridCell.Tab.0.left" timestamp="1594294571201">
-      <screen x="0" y="-1080" width="1920" height="1040" />
+    <state width="1237" height="157" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1595369080677" />
+    <state width="1237" height="157" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1595359252260" />
+    <state width="1237" height="157" key="GridCell.Tab.0.left" timestamp="1595369080676">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="274" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1594294571201" />
-    <state width="1237" height="159" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1594286577040" />
-    <state width="897" height="273" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1590331604230" />
-    <state width="1877" height="274" key="GridCell.Tab.0.right" timestamp="1594294571202">
-      <screen x="0" y="-1080" width="1920" height="1040" />
+    <state width="1237" height="157" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1595369080676" />
+    <state width="1237" height="157" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1595359252260" />
+    <state width="1237" height="157" key="GridCell.Tab.0.right" timestamp="1595369080677">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="274" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1594294571202" />
-    <state width="1237" height="159" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1594286577041" />
-    <state width="897" height="273" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1590331604235" />
+    <state width="1237" height="157" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1595369080677" />
+    <state width="1237" height="157" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1595359252260" />
     <state x="437" y="226" key="com.intellij.ide.util.TipDialog" timestamp="1593972336159">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="656" y="-735" key="com.intellij.ide.util.TipDialog/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1592004417268" />
     <state x="437" y="226" key="com.intellij.ide.util.TipDialog/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1593972336159" />
-    <state x="112" y="-296" key="run.anything.popup" timestamp="1593954708193">
-      <screen x="0" y="-1080" width="1920" height="1040" />
+    <state x="75" y="513" key="run.anything.popup" timestamp="1595542506189">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="112" y="-296" key="run.anything.popup/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1593954708193" />
+    <state x="75" y="513" key="run.anything.popup/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1595542506189" />
     <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup" timestamp="1591782821590">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>

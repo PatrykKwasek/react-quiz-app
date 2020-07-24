@@ -5,10 +5,14 @@ import WelcomePage from "../WelcomePage/WelcomePage";
 import {joinAnswers, shuffleAnswersTable} from "./methods";
 import {CreateButton} from "./CreateButton";
 import {AnswersList} from "./AnswersList";
+import {GetQuestions} from "../../fetchAPI";
 
 class QuestionCard extends React.Component {
     state = {
         questionData: this.props.version,
+        questionNumber: this.props.questionNumber,
+        category: this.props.category,
+        difficulty: this.props.difficulty,
         activeIndex: 0,
         userAnswersArrayResult: [],
         userAnswer: '',
@@ -24,15 +28,25 @@ class QuestionCard extends React.Component {
 
     componentDidMount() {
         let {version} = this.props;
+        const {questionNumber, category, difficulty} = this.state;
 
-        // console.log('Version ', version);
+        console.log('Version ', version);
 
         let getFirstObjectElement = version[0].results[0];
         let questionsTable = shuffleAnswersTable(joinAnswers(getFirstObjectElement));
 
+        async function loadData() {
+            const loadedData = await GetQuestions(questionNumber, category, difficulty);
+            console.log('LoadedData', loadedData);
+            return loadedData;
+        }
+
+        // console.log(loadData());
+        const chooseCorrectQuestionData = version.length < 1 ? loadData() : version;
+
         this.setState({
             questionsTable,
-            questionData: version,
+            questionData: chooseCorrectQuestionData,
         });
     }
 
@@ -111,7 +125,7 @@ class QuestionCard extends React.Component {
             )
         );
 
-        console.log(questionData);
+        console.log('questionData', questionData);
 
         let numberOfQuestions = data.length;
         let correctAnswers = userAnswersArrayResult.filter((item) => (item === 1)).length;
@@ -178,19 +192,20 @@ class QuestionCard extends React.Component {
             '';
 
         return (
-            <div>
+            <>
                 {welcomeMessage}
                 {message}
                 {question}
-            </div>
+            </>
         )
     };
 
     render() {
         return (
-            <div>
-                {this.state.questionData.length !== 0 && this.createQuestionsList(this.state.questionData)}
-            </div>
+            <>
+                {console.log('PROPER PATCH', this.state.questionData)}
+                {this.state.questionData.length !== 0 && (this.createQuestionsList(this.state.questionData))}
+            </>
         )
     }
 }
@@ -217,20 +232,4 @@ QuestionCard.propTypes = {
 //     const [hideQuestion, setHideQuestion] = useState(false);
 //     const [displayStatistics, setDisplayStatistics] = useState(false);
 //     const [displayWelcomeMessage, setDisplayWelcomeMessage] = useState(false);
-//
-//     useEffect(() => {
-//         console.log('Version ', version);
-//
-//         let getFirstObjectElement = version[0].results[0];
-//         let questionsTable = shuffleAnswersTable(joinAnswers(getFirstObjectElement));
-//
-//         setQuestionsTable(questionsTable);
-//         setQuestionData(version);
-//
-//         // this.setState({
-//         //     questionsTable,
-//         //     questionData: version,
-//         // });
-//     });
-//
 // }
