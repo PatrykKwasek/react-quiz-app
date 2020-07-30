@@ -7,6 +7,7 @@ export const CreateButton = ({method, className, txt, condition}) => {
             onClick={method}
             className={className}
             disabled={condition}
+            type={'button'}
         >
             {txt}
         </button>

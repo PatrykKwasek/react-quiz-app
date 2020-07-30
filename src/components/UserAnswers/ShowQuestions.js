@@ -13,22 +13,20 @@ function ShowQuestions ({questionData, data, method, userAnswers, correctAnswers
     function showAnswers() {
         let content =  (
             <>
-                {questionData.map((item) =>
-                    item.results.map((element, index) =>
-                        <div key={`Create list-${index}`} className={'user-answers'}>
-                            <p>
-                                Question {index + 1} / {item.results.length}
-                            </p>
-                            <p>
-                                <strong>
-                                    {element.question}
-                                </strong>
-                            </p>
-                            <div>
-                                {method(data[index], index, userAnswers, correctAnswers)}
-                            </div>
+                {questionData.map((item, index) =>
+                    <div key={`Create list-${index}`} className={'user-answers'}>
+                        <p>
+                            Question {index + 1} / {questionData.length}
+                        </p>
+                        <p>
+                            <strong>
+                                {item.question}
+                            </strong>
+                        </p>
+                        <div>
+                            {method(data[index], index, userAnswers, correctAnswers)}
                         </div>
-                    )
+                    </div>
                 )}
                 <div className={'answers-back-home-button'}>
                     <CreateButton method={showMessage} className={'custom-btn'} txt={'Back to menu'}/>

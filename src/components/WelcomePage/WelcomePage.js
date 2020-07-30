@@ -67,7 +67,9 @@ function WelcomePage() {
         let quizForm = displayForm ? <Form categoriesData={categories}/> : '';
 
         let questions = displayQuestions ?
-            <QuestionCard version={data} /> :
+            <QuestionCard
+                version={data}
+            /> :
             '';
 
         return (

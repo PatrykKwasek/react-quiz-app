@@ -13,7 +13,7 @@ export const GetCategories = () => {
     // categories.push({id: 0, name: "Any Category"});
 
     return UploadAPI(categoriesURL).then(data => {
-        console.log('FETCH', data);
+        // console.log('FETCH', data);
         categories.push(data.trivia_categories);
 
         return categories[0];
@@ -23,8 +23,8 @@ export const GetCategories = () => {
 // Let's connect to API to get questions
 export const GetQuestions = (questionNumber, category, difficulty) => {
   const questions = [];
-  const host = `https://opentdb.com/api.php?amount=12&category=23&difficulty=hard&type=multiple`;
-  // const host = `https://opentdb.com/api.php?amount=${questionNumber}&category=${category}&difficulty=${difficulty}&type=multiple`;
+  // const host = `https://opentdb.com/api.php?amount=10&category=23&difficulty=hard&type=multiple`;
+  const host = `https://opentdb.com/api.php?amount=${questionNumber}&category=${category}&difficulty=${difficulty}&type=multiple`;
 
   return UploadAPI(host).then(data => {
       console.log('HOST', data.results);

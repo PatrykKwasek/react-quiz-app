@@ -3,16 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="cdc8fdfa-e22d-4784-a0ad-e5151dcda388" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/QuestionCard/CreateButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuestionCard/CreateButton.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/QuestionCard/QuestionCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuestionCard/QuestionCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/QuizForm/CreateCategorySelectTypeInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuizForm/CreateCategorySelectTypeInput.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/QuizForm/CreateNumberTypeInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuizForm/CreateNumberTypeInput.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/QuizForm/Example.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuizForm/Example.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/QuestionCard/methods.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuestionCard/methods.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/QuizForm/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuizForm/Form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/UserAnswers/ShowQuestions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserAnswers/ShowQuestions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UserAnswers/UserAnswers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserAnswers/UserAnswers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UserResult/UserResult.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserResult/UserResult.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UserAnswers/UserAnswers.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserAnswers/UserAnswers.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/WelcomePage/WelcomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WelcomePage/WelcomePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/category/books/booksData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/category/books/booksData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/category/general/generalKnowledge.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/category/general/generalKnowledge.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/category/geography/geographyData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/category/geography/geographyData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/category/history/historyData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/category/history/historyData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/category/science/computers/exampleData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/category/science/computers/exampleData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/category/science/computers/questionData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/category/science/computers/questionData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/category/science/mathematics/mathData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/category/science/mathematics/mathData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/category/sport/sportData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/category/sport/sportData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fetchAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/fetchAPI.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
@@ -62,7 +67,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../react-tic-tac-toe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -145,7 +150,9 @@
       <workItem from="1594294457681" duration="12722000" />
       <workItem from="1594377368279" duration="14435000" />
       <workItem from="1595009906168" duration="22204000" />
-      <workItem from="1595364305672" duration="28588000" />
+      <workItem from="1595364305672" duration="43607000" />
+      <workItem from="1596043852904" duration="69000" />
+      <workItem from="1596053119853" duration="19040000" />
     </task>
     <servers />
   </component>
@@ -168,35 +175,35 @@
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="236" y="-752" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1589645921858" />
-    <state x="493" y="172" key="FileChooserDialogImpl" timestamp="1595450242898">
+    <state x="493" y="172" key="FileChooserDialogImpl" timestamp="1595837017266">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="739" y="-817" key="FileChooserDialogImpl/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1592295581313" />
-    <state x="493" y="172" key="FileChooserDialogImpl/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1595450242898" />
+    <state x="493" y="172" key="FileChooserDialogImpl/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1595837017266" />
     <state x="493" y="172" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1588075407937" />
-    <state width="1237" height="157" key="GridCell.Tab.0.bottom" timestamp="1595369080678">
+    <state width="1237" height="157" key="GridCell.Tab.0.bottom" timestamp="1596053175294">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="274" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1594294571202" />
-    <state width="1237" height="157" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1595369080678" />
+    <state width="1237" height="157" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1596053175294" />
     <state width="1237" height="157" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1595359252261" />
-    <state width="1237" height="157" key="GridCell.Tab.0.center" timestamp="1595369080677">
+    <state width="1237" height="157" key="GridCell.Tab.0.center" timestamp="1596053175294">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="274" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1594294571202" />
-    <state width="1237" height="157" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1595369080677" />
+    <state width="1237" height="157" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1596053175294" />
     <state width="1237" height="157" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1595359252260" />
-    <state width="1237" height="157" key="GridCell.Tab.0.left" timestamp="1595369080676">
+    <state width="1237" height="157" key="GridCell.Tab.0.left" timestamp="1596053175293">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="274" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1594294571201" />
-    <state width="1237" height="157" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1595369080676" />
+    <state width="1237" height="157" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1596053175293" />
     <state width="1237" height="157" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1595359252260" />
-    <state width="1237" height="157" key="GridCell.Tab.0.right" timestamp="1595369080677">
+    <state width="1237" height="157" key="GridCell.Tab.0.right" timestamp="1596053175294">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="274" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1594294571202" />
-    <state width="1237" height="157" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1595369080677" />
+    <state width="1237" height="157" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1596053175294" />
     <state width="1237" height="157" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1595359252260" />
     <state x="437" y="226" key="com.intellij.ide.util.TipDialog" timestamp="1593972336159">
       <screen x="0" y="0" width="1280" height="680" />

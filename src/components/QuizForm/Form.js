@@ -11,7 +11,7 @@ import QuestionCard from "../QuestionCard/QuestionCard";
 function Form({categoriesData}) {
     const [questionNumber, setQuestionNumber] = useState(10);
     const [category, setCategory] = useState(0);
-    const [difficulty, setDifficulty] = useState('Any Difficulty');
+    const [difficulty, setDifficulty] = useState('');
     const [hideForm, setHideForm] = useState(false);
     const [welcomePage, setWelcomePage] = useState(false);
     const [questionCard, setQuestionCard] = useState(false);
