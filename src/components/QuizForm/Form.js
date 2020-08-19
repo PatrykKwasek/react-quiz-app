@@ -5,8 +5,8 @@ import {CreateCategorySelectTypeInput} from "./CreateCategorySelectTypeInput";
 import {CreateDifficultySelectTypeInput} from "./CreateDifficultySelectTypeInput";
 import {CreateButton} from "../QuestionCard/CreateButton";
 import WelcomePage from "../WelcomePage/WelcomePage";
-import './Form.css';
 import QuestionCard from "../QuestionCard/QuestionCard";
+import './Form.css';
 
 function Form({categoriesData}) {
     const [questionNumber, setQuestionNumber] = useState(10);

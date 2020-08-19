@@ -3,10 +3,8 @@ import QuestionCard from "../QuestionCard/QuestionCard";
 import Form from "../QuizForm/Form";
 import buttonsData from "./buttonsData";
 import {MainPageContent} from "./MainPageContent";
-import Example from "../QuizForm/Example";
 import './WelcomePage.css';
-import {GetCategories, GetLink} from "../../fetchAPI";
-import {func} from "prop-types";
+import {GetCategories} from "../Api/getAPI";
 
 function WelcomePage() {
     const [displayQuestions, setDisplayQuestions] = useState(false);
@@ -17,11 +15,6 @@ function WelcomePage() {
     const [categories, setCategories] = useState([]);
 
     useEffect(() => {
-        // async function loadCategories() {
-        //     const loadedData = await GetCategories();
-        //     setCategories(loadedData);
-        // }
-
         loadCategories();
     }, []);
 
@@ -45,7 +38,6 @@ function WelcomePage() {
         let result = e.target.innerText;
 
         const quiz = buttonsData.find(item => item.button === result);
-        // console.log('Quiz data', quiz.data);
 
         setData(quiz.data);
 
@@ -63,7 +55,6 @@ function WelcomePage() {
         );
 
         let message = hideWelcomeMessage ? '' : content;
-        // let quizForm = displayForm ? <Example tab={categories}/> : '';
         let quizForm = displayForm ? <Form categoriesData={categories}/> : '';
 
         let questions = displayQuestions ?

@@ -2,23 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdc8fdfa-e22d-4784-a0ad-e5151dcda388" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Api/getAPI.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/QuestionCard/CreateButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuestionCard/CreateButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Api/FetchProcessing.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Api/TriviaApi.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/QuestionCard/QuestionCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuestionCard/QuestionCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/QuestionCard/methods.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuestionCard/methods.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/QuizForm/CreateCategorySelectTypeInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuizForm/CreateCategorySelectTypeInput.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/QuizForm/Example.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/QuizForm/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuizForm/Form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UserAnswers/ShowQuestions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserAnswers/ShowQuestions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UserAnswers/UserAnswers.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserAnswers/UserAnswers.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Rubbish/Shit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Rubbish/xd.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/WelcomePage/WelcomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WelcomePage/WelcomePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/category/books/booksData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/category/books/booksData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/category/general/generalKnowledge.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/category/general/generalKnowledge.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/category/geography/geographyData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/category/geography/geographyData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/category/history/historyData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/category/history/historyData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/category/science/computers/exampleData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/category/science/computers/exampleData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/category/science/computers/questionData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/category/science/computers/questionData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/category/science/mathematics/mathData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/category/science/mathematics/mathData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/category/sport/sportData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/category/sport/sportData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fetchAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/fetchAPI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fetchAPI.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -152,7 +148,11 @@
       <workItem from="1595009906168" duration="22204000" />
       <workItem from="1595364305672" duration="43607000" />
       <workItem from="1596043852904" duration="69000" />
-      <workItem from="1596053119853" duration="19040000" />
+      <workItem from="1596053119853" duration="20085000" />
+      <workItem from="1596203723639" duration="17972000" />
+      <workItem from="1596561329824" duration="2980000" />
+      <workItem from="1596718260618" duration="92000" />
+      <workItem from="1597832891850" duration="243000" />
     </task>
     <servers />
   </component>
@@ -175,46 +175,50 @@
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="236" y="-752" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1589645921858" />
-    <state x="493" y="172" key="FileChooserDialogImpl" timestamp="1595837017266">
+    <state x="493" y="172" key="FileChooserDialogImpl" timestamp="1596388377130">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="739" y="-817" key="FileChooserDialogImpl/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1592295581313" />
-    <state x="493" y="172" key="FileChooserDialogImpl/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1595837017266" />
+    <state x="493" y="172" key="FileChooserDialogImpl/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1596388377130" />
     <state x="493" y="172" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1588075407937" />
-    <state width="1237" height="157" key="GridCell.Tab.0.bottom" timestamp="1596053175294">
+    <state width="1237" height="157" key="GridCell.Tab.0.bottom" timestamp="1596617190230">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="274" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1594294571202" />
-    <state width="1237" height="157" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1596053175294" />
+    <state width="1237" height="157" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1596617190230" />
     <state width="1237" height="157" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1595359252261" />
-    <state width="1237" height="157" key="GridCell.Tab.0.center" timestamp="1596053175294">
+    <state width="1237" height="157" key="GridCell.Tab.0.center" timestamp="1596617190229">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="274" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1594294571202" />
-    <state width="1237" height="157" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1596053175294" />
+    <state width="1237" height="157" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1596617190229" />
     <state width="1237" height="157" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1595359252260" />
-    <state width="1237" height="157" key="GridCell.Tab.0.left" timestamp="1596053175293">
+    <state width="1237" height="157" key="GridCell.Tab.0.left" timestamp="1596617190229">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="274" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1594294571201" />
-    <state width="1237" height="157" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1596053175293" />
+    <state width="1237" height="157" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1596617190229" />
     <state width="1237" height="157" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1595359252260" />
-    <state width="1237" height="157" key="GridCell.Tab.0.right" timestamp="1596053175294">
+    <state width="1237" height="157" key="GridCell.Tab.0.right" timestamp="1596617190230">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1877" height="274" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1594294571202" />
-    <state width="1237" height="157" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1596053175294" />
+    <state width="1237" height="157" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1596617190230" />
     <state width="1237" height="157" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1595359252260" />
-    <state x="437" y="226" key="com.intellij.ide.util.TipDialog" timestamp="1593972336159">
+    <state x="437" y="226" key="com.intellij.ide.util.TipDialog" timestamp="1596203726566">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="656" y="-735" key="com.intellij.ide.util.TipDialog/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1592004417268" />
-    <state x="437" y="226" key="com.intellij.ide.util.TipDialog/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1593972336159" />
-    <state x="75" y="513" key="run.anything.popup" timestamp="1595542506189">
+    <state x="437" y="226" key="com.intellij.ide.util.TipDialog/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1596203726566" />
+    <state x="450" y="259" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596235373414">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="450" y="259" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1596235373414" />
+    <state x="75" y="513" key="run.anything.popup" timestamp="1596384172389">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="112" y="-296" key="run.anything.popup/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1593954708193" />
-    <state x="75" y="513" key="run.anything.popup/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1595542506189" />
+    <state x="75" y="513" key="run.anything.popup/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1596384172389" />
     <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup" timestamp="1591782821590">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
