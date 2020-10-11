@@ -1,63 +1,55 @@
-import React, {useState} from "react";
+import React, { useState } from 'react';
+
 import PropTypes from 'prop-types';
-import {CreateButton} from "../QuestionCard/CreateButton";
-import WelcomePage from "../WelcomePage/WelcomePage";
 
-function ShowQuestions ({questionData, data, method, userAnswers, correctAnswers}) {
-    const [hideStatistics, setHideStatistics] = useState(false);
+import WelcomePage from '../WelcomePage/WelcomePage';
+import UserAnswerContent from './UserAnswersContent';
 
-    function showMessage() {
-        setHideStatistics(true);
-    }
+export default function ShowQuestions({
+  questionData,
+  data,
+  method,
+  userAnswers,
+  correctAnswers,
+}) {
+  const [hideStatistics, setHideStatistics] = useState(false);
 
-    function showAnswers() {
-        let content =  (
-            <>
-                {questionData.map((item, index) =>
-                    <div key={`Create list-${index}`} className={'user-answers'}>
-                        <p>
-                            Question {index + 1} / {questionData.length}
-                        </p>
-                        <p>
-                            <strong>
-                                {item.question}
-                            </strong>
-                        </p>
-                        <div>
-                            {method(data[index], index, userAnswers, correctAnswers)}
-                        </div>
-                    </div>
-                )}
-                <div className={'answers-back-home-button'}>
-                    <CreateButton method={showMessage} className={'custom-btn'} txt={'Back to menu'}/>
-                </div>
-            </>
+  function showMessage() {
+    setHideStatistics(true);
+  }
 
+  function showAnswers() {
+    const content = (
+      <UserAnswerContent
+        questionData={questionData}
+        data={data}
+        method={method}
+        userAnswers={userAnswers}
+        correctAnswers={correctAnswers}
+        onClick={showMessage}
+      />
+    );
 
-        );
+    const hideStats = hideStatistics ? <WelcomePage /> : content;
 
-        let hideStats = hideStatistics ? <WelcomePage /> : content;
+    return <>{hideStats}</>;
+  }
 
-        return (
-            <>
-                {hideStats}
-            </>
-        )
-    }
-
-    return (
-        <>
-            {showAnswers()}
-        </>
-    )
+  return <>{showAnswers()}</>;
 }
 
-export default ShowQuestions;
+ShowQuestions.defaultProps = {
+  questionData: [{}],
+  data: [[]],
+  method: () => {},
+  userAnswers: [''],
+  correctAnswers: [''],
+};
 
 ShowQuestions.propTypes = {
-    questionData: PropTypes.array,
-    data: PropTypes.array,
-    method: PropTypes.func,
-    userAnswers: PropTypes.array,
-    correctAnswers: PropTypes.array,
+  questionData: PropTypes.arrayOf(PropTypes.object),
+  data: PropTypes.arrayOf(PropTypes.array),
+  method: PropTypes.func,
+  userAnswers: PropTypes.arrayOf(PropTypes.string),
+  correctAnswers: PropTypes.arrayOf(PropTypes.string),
 };

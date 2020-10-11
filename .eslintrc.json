@@ -1,0 +1,43 @@
+{
+  "extends": ["airbnb", "prettier", "prettier/react"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": ["error", {
+      "endOfLine": "auto"
+    }],
+    "react/no-array-index-key": "off", // Keep in mind index form map method
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", "jsx"]
+      }
+    ],
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal"],
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "external",
+            "position": "before"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["react"],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
+    "no-console": "off",
+    "no-undef": "off",
+    "radix": "off",
+    "no-nested-ternary": "off",
+    "no-unused-vars": ["error", { "args": "none" }] // Stop checking only function arguments!
+  },
+  "globals": {
+    "localStorage": true
+  }
+}

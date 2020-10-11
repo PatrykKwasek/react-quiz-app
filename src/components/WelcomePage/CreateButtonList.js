@@ -1,25 +1,32 @@
-import React from "react";
-import PropTypes from 'prop-types';
-import {CreateButton} from "../QuestionCard/CreateButton";
+import React from 'react';
 
-export const CreateButtonList = ({tab, method, className}) => {
-    return (
-        <div className={className[1]}>
-            {tab.map((item, index) =>
-            <p key={`Answers list-${index}`} className={className[2]}>
-                <CreateButton
-                    method={method}
-                    className={className[0]}
-                    txt={item.button}
-                />
-            </p>
-            )}
-        </div>
-    )
+import PropTypes from 'prop-types';
+
+import Button from '../Button/Button';
+
+export default function CreateButtonList({ tab, onClick }) {
+  return (
+    <div className='welcome-page-buttons-list'>
+      {tab.map((item, index) => (
+        <p key={`Answers list-${index}`} className='txt-inside-btn'>
+          <Button
+            onClick={onClick}
+            className='btn'
+            txt={item.button}
+            type='button'
+          />
+        </p>
+      ))}
+    </div>
+  );
+}
+
+CreateButtonList.defaultProps = {
+  tab: [{}],
+  onClick: () => {},
 };
 
 CreateButtonList.propTypes = {
-    tab: PropTypes.array,
-    method: PropTypes.func,
-    className: PropTypes.array,
+  tab: PropTypes.arrayOf(PropTypes.object),
+  onClick: PropTypes.func,
 };

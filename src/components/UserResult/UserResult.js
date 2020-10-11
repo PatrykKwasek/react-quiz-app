@@ -1,91 +1,101 @@
-import React, {useState} from "react";
+import React, { useState } from 'react';
+
 import PropTypes from 'prop-types';
-import WelcomePage from "../WelcomePage/WelcomePage";
-import QuestionCard from "../QuestionCard/QuestionCard";
-import UserAnswers from "../UserAnswers/UserAnswers";
-import {CreateButton} from "../QuestionCard/CreateButton";
+
+import { changeStatement } from '../../methods/methods';
+import QuestionCard from '../QuestionCard/QuestionCard';
+import UserAnswers from '../UserAnswers/UserAnswers';
+import WelcomePage from '../WelcomePage/WelcomePage';
 import './UserResult.css';
+import UserResultContent from './UserResultContent';
 
-function UserResult({sendInfo, chosenAnswers, correct, shuffledAnswers, result, correctAnswers, numberOfQuestions}) {
-    const [displayWelcomeMessage, setDisplayWelcomeMessage] = useState(false);
-    const [displayQuestions, setDisplayQuestions] = useState(false);
-    const [displayAnswers, setDisplayAnswers] = useState(false);
-    const [hideStatistics, setHideStatistics] = useState(false);
+export default function UserResult({
+  sendInfo,
+  chosenAnswers,
+  correct,
+  shuffledAnswers,
+  result,
+  correctAnswers,
+  numberOfQuestions,
+}) {
+  const [displayWelcomeMessage, setDisplayWelcomeMessage] = useState(false);
+  const [displayQuestions, setDisplayQuestions] = useState(false);
+  const [displayAnswers, setDisplayAnswers] = useState(false);
+  const [hideStatistics, setHideStatistics] = useState(false);
 
-    function showMessage() {
-        setDisplayWelcomeMessage(true);
-        setHideStatistics(true);
-    }
+  function showMessage() {
+    changeStatement(true, setDisplayWelcomeMessage, setHideStatistics);
+  }
 
-    function showQuestion() {
-        setDisplayQuestions(true);
-        setHideStatistics(true);
-    }
+  function showQuestion() {
+    changeStatement(true, setDisplayQuestions, setHideStatistics);
+  }
 
-    function showAnswers() {
-        setDisplayAnswers(true);
-        setHideStatistics(true);
-    }
+  function showAnswers() {
+    changeStatement(true, setDisplayAnswers, setHideStatistics);
+  }
 
-    function changeContent() {
-        let content = (
-            <div className={'user-result-container myBody'}>
-                <h2 className={'result-heading'}>CONGRATULATIONS!</h2>
-                <p className={'result-paragraph-verdict'}>You've {result} the test.</p>
+  function setContent() {
+    const content = (
+      <UserResultContent
+        result={result}
+        correctAnswers={correctAnswers}
+        numberOfQuestions={numberOfQuestions}
+        showMessage={showMessage}
+        showQuestion={showQuestion}
+        showAnswers={showAnswers}
+      />
+    );
 
-                <p className={'result-user-score'}>
-                    You have got <strong>{` ${correctAnswers}`}</strong> out of
-                    <strong>{` ${numberOfQuestions}`}</strong> questions right.
-                </p>
-
-                <div className={'result-buttons'}>
-                    <CreateButton method={showMessage} className={'custom-btn'} txt={'Back to menu'}/>
-                    <CreateButton method={showQuestion} className={'custom-btn'} txt={'Restart'}/>
-                    <CreateButton method={showAnswers} className={'custom-btn'} txt={'Show answers'}/>
-                </div>
-            </div>
-        );
-
-        let hideStats = hideStatistics ? '' : content;
-        let welcomeMessage = displayWelcomeMessage ? <WelcomePage /> : '';
-        let questionCard = displayQuestions ? <QuestionCard version={sendInfo}/> : '';
-        let userAnswers = displayAnswers ?
-            <UserAnswers
-                questionDb={sendInfo}
-                answers={chosenAnswers}
-                correctness={correct}
-                shuffleData={shuffledAnswers}/> :
-            '';
-
-        return (
-            <>
-                {hideStats}
-                {welcomeMessage}
-                {questionCard}
-                {userAnswers}
-            </>
-        )
-    }
+    const hideStats = hideStatistics ? '' : content;
+    const welcomeMessage = displayWelcomeMessage ? <WelcomePage /> : '';
+    const questionCard = displayQuestions ? (
+      <QuestionCard version={sendInfo} />
+    ) : (
+      ''
+    );
+    const userAnswers = displayAnswers ? (
+      <UserAnswers
+        questionDb={sendInfo}
+        answers={chosenAnswers}
+        correctness={correct}
+        shuffleData={shuffledAnswers}
+      />
+    ) : (
+      ''
+    );
 
     return (
-        <>
-            {changeContent()}
-        </>
-    )
+      <>
+        {hideStats}
+        {welcomeMessage}
+        {questionCard}
+        {userAnswers}
+      </>
+    );
+  }
+
+  return <>{setContent()}</>;
 }
 
-export default UserResult;
-
 UserResult.defaultProps = {
-    numberOfQuestions: 4,
+  sendInfo: [{}],
+  chosenAnswers: [''],
+  correct: [''],
+  shuffledAnswers: [[]],
+  // result: {},
+  correctAnswers: 0,
+  numberOfQuestions: 4,
 };
 
 UserResult.propTypes = {
-    sendInfo: PropTypes.array,
-    chosenAnswers: PropTypes.array,
-    correct: PropTypes.array,
-    shuffledAnswers: PropTypes.array,
-    result: PropTypes.object,
-    correctAnswers: PropTypes.number,
-    numberOfQuestions: PropTypes.number,
+  sendInfo: PropTypes.arrayOf(PropTypes.object),
+  chosenAnswers: PropTypes.arrayOf(PropTypes.string),
+  correct: PropTypes.arrayOf(PropTypes.string),
+  shuffledAnswers: PropTypes.arrayOf(PropTypes.array),
+  // result: PropTypes.objectOf(
+  //   PropTypes.oneOfType([PropTypes.string, PropTypes.symbol])
+  // ),
+  correctAnswers: PropTypes.number,
+  numberOfQuestions: PropTypes.number,
 };

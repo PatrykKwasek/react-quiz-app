@@ -1,100 +1,82 @@
-import React, {useState} from "react";
-import {CreateInputLabel} from "./CreateInputLabel";
-import {CreateNumberTypeInput} from "./CreateNumberTypeInput";
-import {CreateCategorySelectTypeInput} from "./CreateCategorySelectTypeInput";
-import {CreateDifficultySelectTypeInput} from "./CreateDifficultySelectTypeInput";
-import {CreateButton} from "../QuestionCard/CreateButton";
-import WelcomePage from "../WelcomePage/WelcomePage";
-import QuestionCard from "../QuestionCard/QuestionCard";
+import React, { useState } from 'react';
+
+import PropTypes from 'prop-types';
+
+import { changeStatement } from '../../methods/methods';
+import QuestionCard from '../QuestionCard/QuestionCard';
+import WelcomePage from '../WelcomePage/WelcomePage';
 import './Form.css';
+import FormContent from './FormContent';
 
-function Form({categoriesData}) {
-    const [questionNumber, setQuestionNumber] = useState(10);
-    const [category, setCategory] = useState(0);
-    const [difficulty, setDifficulty] = useState('');
-    const [hideForm, setHideForm] = useState(false);
-    const [welcomePage, setWelcomePage] = useState(false);
-    const [questionCard, setQuestionCard] = useState(false);
+export default function Form({ categoriesData }) {
+  const [questionNumber, setQuestionNumber] = useState(10);
+  const [category, setCategory] = useState(0);
+  const [difficulty, setDifficulty] = useState('');
+  const [hideForm, setHideForm] = useState(false);
+  const [welcomePage, setWelcomePage] = useState(false);
+  const [questionCard, setQuestionCard] = useState(false);
 
-    function handleQuestionsNumber(e) {
-        setQuestionNumber(e.target.value);
-    }
+  function handleQuestionsNumber(e) {
+    setQuestionNumber(e.target.value);
+  }
 
-    function handleCategory(e) {
-        setCategory(e.target.value);
-    }
+  function handleCategory(e) {
+    setCategory(e.target.value);
+  }
 
-    function handleDifficulty(e) {
-        setDifficulty(e.target.value);
-    }
+  function handleDifficulty(e) {
+    setDifficulty(e.target.value);
+  }
 
-    function showQuestionCard() {
-        setHideForm(true);
-        setQuestionCard(true);
-    }
+  function showQuestionCard() {
+    changeStatement(true, setHideForm, setQuestionCard);
+  }
 
-    function showWelcomePage() {
-        setHideForm(true);
-        setWelcomePage(true);
-    }
+  function showWelcomePage() {
+    changeStatement(true, setHideForm, setWelcomePage);
+  }
 
-    function formContent() {
-        let content = (
-            <form className={'form'}>
-                <p>
-                    <CreateInputLabel txt={'Number of Questions: '} /><br/>
-                    <CreateNumberTypeInput
-                        type={'number'}
-                        method={handleQuestionsNumber}
-                        defaultValue={10}
-                    />
-                </p>
+  function formContent() {
+    const content = (
+      <FormContent
+        handleQuestionsNumber={handleQuestionsNumber}
+        handleCategory={handleCategory}
+        categoriesData={categoriesData}
+        getDifficulties={handleDifficulty}
+        showQuestionCard={showQuestionCard}
+        showWelcomePage={showWelcomePage}
+      />
+    );
 
-                <p>
-                    <CreateInputLabel txt={'Category: '} /><br/>
-                    <CreateCategorySelectTypeInput method={handleCategory} tab={categoriesData}/>
-                </p>
+    const form = hideForm ? '' : content;
+    const home = welcomePage ? <WelcomePage /> : '';
 
-                <p>
-                    <CreateInputLabel txt={'Difficulty: '} /><br/>
-                    <CreateDifficultySelectTypeInput
-                        method={handleDifficulty}
-                        item={['Any difficulty', 'Easy', 'Medium', 'Hard']}
-                    />
-                </p>
-
-                <p>
-                    <CreateButton method={showQuestionCard} className={'form-button'} txt={'START'}/>
-                    <CreateButton method={showWelcomePage} className={'form-button'} txt={'MENU'}/>
-                </p>
-            </form>
-        );
-
-        let form = hideForm ? '' : content;
-        let home = welcomePage ? <WelcomePage /> : '';
-
-        let question = questionCard  ?
-            <QuestionCard
-                questionNumber={questionNumber}
-                category={category}
-                difficulty={difficulty}
-            /> :
-            '';
-
-        return (
-            <div className={'form-container'}>
-                {form}
-                {home}
-                {question}
-            </div>
-        )
-    }
+    const question = questionCard ? (
+      <QuestionCard
+        questionNumber={questionNumber}
+        category={category}
+        difficulty={difficulty}
+      />
+    ) : (
+      ''
+    );
 
     return (
-        <>
-            {formContent()}
-        </>
-    )
+      <div className='form-container'>
+        {form}
+        {home}
+        {question}
+      </div>
+    );
+  }
+
+  return <>{formContent()}</>;
 }
 
-export default Form;
+Form.defaultProps = {
+  categoriesData: [{}],
+};
+
+Form.propTypes = {
+  categoriesData: PropTypes.arrayOf(PropTypes.object),
+};

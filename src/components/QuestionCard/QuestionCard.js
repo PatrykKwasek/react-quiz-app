@@ -1,180 +1,190 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from 'react';
+
 import PropTypes from 'prop-types';
-import UserResult from "../UserResult/UserResult";
-import WelcomePage from "../WelcomePage/WelcomePage";
-import {joinAnswers, shuffleAnswersTable} from "./methods";
-import {CreateButton} from "./CreateButton";
-import {AnswersList} from "./AnswersList";
-import {GetQuestions} from "../Api/getAPI";
 
-function QuestionCard({questionNumber, category, difficulty, version}) {
-    const [questionData, setQuestionData] = useState([]);
-    let [activeIndex, setActiveIndex] = useState(0);
-    const [userAnswersArrayResult, setUserAnswersArrayResult] = useState([]);
-    const [userAnswer, setUserAnswer] = useState('');
-    const [questionsTable, setQuestionsTable] = useState([]);
-    const [buttonClicked, setButtonClicked] = useState('');
-    const [chosenAnswers, setChosenAnswers] = useState([]);
-    const [correct, setCorrect] = useState([]);
-    const [shuffledAnswers, setShuffledAnswers] = useState([]);
-    const [hideQuestion, setHideQuestion] = useState(false);
-    const [displayStatistics, setDisplayStatistics] = useState(false);
-    const [displayWelcomeMessage, setDisplayWelcomeMessage] = useState(false);
+import {
+  changeStatement,
+  joinAnswers,
+  shuffleAnswersTable,
+} from '../../methods/methods';
+import { GetQuestions } from '../Api/getAPI';
+import Button from '../Button/Button';
+import UserResult from '../UserResult/UserResult';
+import WelcomePage from '../WelcomePage/WelcomePage';
+import QuestionCardContent from './QuestionCardContent';
 
-    useEffect(() => {
-        version ? loadExampleQuestion() : loadQuestions();
-    }, []);
+export default function QuestionCard({
+  questionNumber,
+  category,
+  difficulty,
+  version,
+}) {
+  const [questionData, setQuestionData] = useState([]);
+  let [activeIndex, setActiveIndex] = useState(0);
+  const [userAnswersArrayResult, setUserAnswersArrayResult] = useState([]);
+  const [userAnswer, setUserAnswer] = useState('');
+  const [questionsTable, setQuestionsTable] = useState([]);
+  const [buttonClicked, setButtonClicked] = useState('');
+  const [chosenAnswers, setChosenAnswers] = useState([]);
+  const [correct, setCorrect] = useState([]);
+  const [shuffledAnswers, setShuffledAnswers] = useState([]);
+  const [hideQuestion, setHideQuestion] = useState(false);
+  const [displayStatistics, setDisplayStatistics] = useState(false);
+  const [displayWelcomeMessage, setDisplayWelcomeMessage] = useState(false);
 
-    const loadExampleQuestion = () => {
-        const loadedExampleQuestions = version;
-        setQuestionData(loadedExampleQuestions);
-        setQuestionsTable(shuffleAnswersTable(joinAnswers(loadedExampleQuestions[activeIndex])));
-    };
+  useEffect(() => {
+    version ? loadExampleQuestion() : loadQuestions();
+  }, []);
 
-    const loadQuestions = async () => {
-        const loadedQuestions = await GetQuestions(questionNumber, category, difficulty);
-        setQuestionData(loadedQuestions);
-        setQuestionsTable(shuffleAnswersTable(joinAnswers(loadedQuestions[activeIndex])));
-    };
+  const loadExampleQuestion = () => {
+    const loadedExampleQuestions = version;
+    setQuestionData(loadedExampleQuestions);
+    setQuestionsTable(
+      shuffleAnswersTable(joinAnswers(loadedExampleQuestions[activeIndex]))
+    );
+  };
 
-    const checkAnswerCorrectness = () => {
-        let checkAnswerCorrectness = (userAnswer === questionData[activeIndex].correct_answer) ?
-            userAnswersArrayResult.concat(1):
-            userAnswersArrayResult.concat(0);
+  const loadQuestions = async () => {
+    const loadedQuestions = await GetQuestions(
+      questionNumber,
+      category,
+      difficulty
+    );
+    setQuestionData(loadedQuestions);
+    setQuestionsTable(
+      shuffleAnswersTable(joinAnswers(loadedQuestions[activeIndex]))
+    );
+  };
 
-        setUserAnswersArrayResult(checkAnswerCorrectness);
-        setUserAnswer('');
-        setChosenAnswers(chosenAnswers.concat(userAnswer));
-        setCorrect(correct.concat(questionData[activeIndex].correct_answer));
-        setShuffledAnswers(shuffledAnswers.concat([questionsTable]));
-    };
+  const checkAnswerCorrectness = () => {
+    const checkAnswerCorrectness =
+      userAnswer === questionData[activeIndex].correct_answer
+        ? userAnswersArrayResult.concat(1)
+        : userAnswersArrayResult.concat(0);
 
-    const showStartMenu = () => {
-        setDisplayWelcomeMessage(true);
-        setHideQuestion(true);
-    };
+    setUserAnswersArrayResult(checkAnswerCorrectness);
+    setUserAnswer('');
+    setChosenAnswers(chosenAnswers.concat(userAnswer));
+    setCorrect(correct.concat(questionData[activeIndex].correct_answer));
+    setShuffledAnswers(shuffledAnswers.concat([questionsTable]));
+  };
 
-    const hideQuestionDisplayStatistics = () => {
-        checkAnswerCorrectness();
+  const showStartMenu = () => {
+    changeStatement(true, setHideQuestion, setDisplayWelcomeMessage);
+  };
 
-        setHideQuestion(true);
-        setDisplayStatistics(true);
-    };
+  const hideQuestionDisplayStatistics = () => {
+    checkAnswerCorrectness();
 
-    const handleNextQuestion = () => {
-        let getFirstObjectElement = questionData[activeIndex + 1];
-        let questionsTable = shuffleAnswersTable(joinAnswers(getFirstObjectElement));
+    changeStatement(true, setHideQuestion, setDisplayStatistics);
+  };
 
-        checkAnswerCorrectness();
+  const handleNextQuestion = () => {
+    const getFirstObjectElement = questionData[activeIndex + 1];
+    const questionsTable = shuffleAnswersTable(
+      joinAnswers(getFirstObjectElement)
+    );
 
-        if (activeIndex === questionData.length - 1) {
-            activeIndex = 0;
-        } else {
-            activeIndex++;
-        }
+    checkAnswerCorrectness();
 
-        setActiveIndex(activeIndex);
-        setQuestionsTable(questionsTable);
-        setButtonClicked('');
-    };
+    if (activeIndex === questionData.length - 1) {
+      activeIndex = 0;
+    } else {
+      activeIndex++;
+    }
 
-    const checkAnswer = (e, id) => {
-        e.preventDefault();
-        let clickedAnswer = e.target.innerText.slice(3);
+    setActiveIndex(activeIndex);
+    setQuestionsTable(questionsTable);
+    setButtonClicked('');
+  };
 
-        setUserAnswer(clickedAnswer);
-        setButtonClicked(id);
-    };
+  const checkAnswer = (e, id) => {
+    e.preventDefault();
+    const clickedAnswer = e.target.innerText.slice(3);
 
-    const createQuestionsList = (questionData) => {
-        let data = [];
+    setUserAnswer(clickedAnswer);
+    setButtonClicked(id);
+  };
 
-        questionData.map(item =>
-            data.push(item)
-        );
+  const createQuestionsList = questionData => {
+    const data = [];
 
-        let numberOfQuestions = data.length;
-        let correctAnswers = userAnswersArrayResult.filter((item) => (item === 1)).length;
-        let quizResult = (correctAnswers / data.length) >= 0.5 ?
-            <strong>PASSED</strong> :
-            <strong>FAILED</strong>;
+    questionData.map(item => data.push(item));
 
-        let appropriateButton = userAnswer === '' ?
-            '' :
-            (data.length - 1 === activeIndex) ?
-                <CreateButton
-                    method={hideQuestionDisplayStatistics}
-                    className={''}
-                    txt={'Show statistics'}
-                    condition={false}
-                /> :
-                <CreateButton
-                    method={handleNextQuestion}
-                    className={''}
-                    txt={'Next question'}
-                    condition={false}
-                />;
+    const numberOfQuestions = data.length;
+    const correctAnswers = userAnswersArrayResult.filter(item => item === 1)
+      .length;
+    const quizResult =
+      correctAnswers / data.length >= 0.5 ? (
+        <strong>PASSED</strong>
+      ) : (
+        <strong>FAILED</strong>
+      );
 
-        let content = (
-            <div key={`Create list-${activeIndex}`} className={'question-card'}>
-                <p className={'number-of-question'}>Question {activeIndex + 1} / {data.length}</p>
-                <p className={'question'}>
-                    <strong>{data[activeIndex].question}</strong>
-                </p>
+    const appropriateButton =
+      userAnswer === '' ? (
+        ''
+      ) : data.length - 1 === activeIndex ? (
+        <Button
+          onClick={hideQuestionDisplayStatistics}
+          className=''
+          txt='Show statistics'
+          condition={false}
+          type='button'
+        />
+      ) : (
+        <Button
+          onClick={handleNextQuestion}
+          className=''
+          txt='Next question'
+          condition={false}
+          type='button'
+        />
+      );
 
-                <div className={'answers'}>
-                    <AnswersList
-                        questionsTable={questionsTable}
-                        buttonClicked={buttonClicked}
-                        method={checkAnswer}
-                    />
-                </div>
+    const content = (
+      <QuestionCardContent
+        activeIndex={activeIndex}
+        data={data}
+        questionsTable={questionsTable}
+        buttonClicked={buttonClicked}
+        checkAnswer={checkAnswer}
+        appropriateButton={appropriateButton}
+        showStartMenu={showStartMenu}
+      />
+    );
 
-                <div className={'appropriate-button'}>
-                    <p>{appropriateButton}</p>
-                </div>
-
-                <p className={'back-to-menu'}>
-                    <CreateButton
-                        method={showStartMenu}
-                        className={'button-back-to-menu'}
-                        txt={'BACK TO MENU'}
-                    />
-                </p>
-            </div>
-        );
-
-        let welcomeMessage = displayWelcomeMessage ? <WelcomePage /> : '';
-        let message = hideQuestion ? '' : content;
-        let question = displayStatistics ?
-            <UserResult
-                result={quizResult}
-                numberOfQuestions={numberOfQuestions}
-                correctAnswers={correctAnswers}
-                chosenAnswers={chosenAnswers}
-                correct={correct}
-                shuffledAnswers={shuffledAnswers}
-                sendInfo={questionData}/> :
-            '';
-
-        return (
-            <>
-                {welcomeMessage}
-                {message}
-                {question}
-            </>
-        )
-    };
+    const welcomeMessage = displayWelcomeMessage ? <WelcomePage /> : '';
+    const message = hideQuestion ? '' : content;
+    const question = displayStatistics ? (
+      <UserResult
+        result={quizResult}
+        numberOfQuestions={numberOfQuestions}
+        correctAnswers={correctAnswers}
+        chosenAnswers={chosenAnswers}
+        correct={correct}
+        shuffledAnswers={shuffledAnswers}
+        sendInfo={questionData}
+      />
+    ) : (
+      ''
+    );
 
     return (
-        <>
-            {questionData.length !== 0 && (createQuestionsList(questionData))}
-        </>
-    )
+      <>
+        {welcomeMessage}
+        {message}
+        {question}
+      </>
+    );
+  };
+
+  return <>{questionData.length !== 0 && createQuestionsList(questionData)}</>;
 }
 
-export default QuestionCard;
-
 QuestionCard.propTypes = {
-    version: PropTypes.array,
+  version: PropTypes.arrayOf(PropTypes.object),
+  // questionNumber: PropTypes.number,
+  // category: PropTypes.string,
+  // difficulty: PropTypes.string,
 };

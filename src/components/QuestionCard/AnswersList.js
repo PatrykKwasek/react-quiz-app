@@ -1,30 +1,36 @@
-import React from "react";
+import React from 'react';
+
 import PropTypes from 'prop-types';
-import CreateAnswerButtons from "./CreateAnswerButtons";
 
-export const AnswersList = ({questionsTable, buttonClicked, method}) => {
+import CreateAnswerButtons from './CreateAnswerButtons';
+
+export default function AnswersList({ questionsTable, buttonClicked, method }) {
+  return questionsTable.map((item, index) => {
+    const id = `button${index + 1}`;
+    const className =
+      buttonClicked === id ? 'clicked-button' : 'inactive-button';
+
     return (
-        questionsTable.map((item, index) => {
-                let id = `button${index + 1}`;
-                let className = (buttonClicked === id) ? "clicked-button" : "inactive-button";
+      <p key={`Answers list-${index}`} className='answers-paragraph'>
+        <CreateAnswerButtons
+          id={id}
+          method={method}
+          className={className}
+          item={item}
+        />
+      </p>
+    );
+  });
+}
 
-                return (
-                    <p key={`Answers list-${index}`} className={'answers-paragraph'}>
-                        <CreateAnswerButtons
-                            id={id}
-                            method={method}
-                            className={className}
-                            item={item}
-                        />
-                    </p>
-                )
-            }
-        )
-    )
+AnswersList.defaultProps = {
+  questionsTable: [''],
+  buttonClicked: '',
+  method: () => {},
 };
 
 AnswersList.propTypes = {
-    questionsTable: PropTypes.array,
-    buttonClicked: PropTypes.string,
-    method: PropTypes.func,
+  questionsTable: PropTypes.arrayOf(PropTypes.string),
+  buttonClicked: PropTypes.string,
+  method: PropTypes.func,
 };

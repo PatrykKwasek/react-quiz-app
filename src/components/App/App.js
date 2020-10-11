@@ -1,14 +1,7 @@
-import React from "react";
-import WelcomePage from "../WelcomePage/WelcomePage";
+import React from 'react';
 
-class App extends React.Component {
-    render() {
-        return (
-            <>
-                <WelcomePage />
-            </>
-        )
-    }
+import WelcomePage from '../WelcomePage/WelcomePage';
+
+export default function App() {
+  return <WelcomePage />;
 }
-
-export default App;
