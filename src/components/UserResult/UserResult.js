@@ -23,19 +23,19 @@ export default function UserResult({
   const [displayAnswers, setDisplayAnswers] = useState(false);
   const [hideStatistics, setHideStatistics] = useState(false);
 
-  function showMessage() {
+  const showMessage = () => {
     changeStatement(true, setDisplayWelcomeMessage, setHideStatistics);
-  }
+  };
 
-  function showQuestion() {
+  const showQuestion = () => {
     changeStatement(true, setDisplayQuestions, setHideStatistics);
-  }
+  };
 
-  function showAnswers() {
+  const showAnswers = () => {
     changeStatement(true, setDisplayAnswers, setHideStatistics);
-  }
+  };
 
-  function setContent() {
+  const setContent = () => {
     const content = (
       <UserResultContent
         result={result}
@@ -73,7 +73,7 @@ export default function UserResult({
         {userAnswers}
       </>
     );
-  }
+  };
 
   return <>{setContent()}</>;
 }

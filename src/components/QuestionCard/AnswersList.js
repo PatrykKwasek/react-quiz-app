@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import CreateAnswerButtons from './CreateAnswerButtons';
+import Button from '../Button/Button';
 
 export default function AnswersList({ questionsTable, buttonClicked, method }) {
   return questionsTable.map((item, index) => {
@@ -12,11 +12,11 @@ export default function AnswersList({ questionsTable, buttonClicked, method }) {
 
     return (
       <p key={`Answers list-${index}`} className='answers-paragraph'>
-        <CreateAnswerButtons
+        <Button
           id={id}
-          method={method}
+          onClick={e => method(e, id)}
           className={className}
-          item={item}
+          txt={item}
         />
       </p>
     );
@@ -24,13 +24,13 @@ export default function AnswersList({ questionsTable, buttonClicked, method }) {
 }
 
 AnswersList.defaultProps = {
-  questionsTable: [''],
+  // questionsTable: [{}],
   buttonClicked: '',
   method: () => {},
 };
 
 AnswersList.propTypes = {
-  questionsTable: PropTypes.arrayOf(PropTypes.string),
+  questionsTable: PropTypes.array,
   buttonClicked: PropTypes.string,
   method: PropTypes.func,
 };

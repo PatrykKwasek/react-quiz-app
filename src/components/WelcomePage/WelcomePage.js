@@ -16,35 +16,35 @@ export default function WelcomePage() {
 
   const [categories, setCategories] = useState([]);
 
-  useEffect(() => {
-    loadCategories();
-  }, []);
-
   const loadCategories = async () => {
     const loadedCategories = await GetCategories();
     setCategories(loadedCategories);
   };
 
-  function showMessage() {
+  useEffect(() => {
+    loadCategories();
+  }, []);
+
+  const showMessage = () => {
     changeStatement(true, setDisplayQuestions, setHideWelcomeMessage);
-  }
+  };
 
-  function showForm() {
+  const showForm = () => {
     changeStatement(true, setDisplayForm, setHideWelcomeMessage);
-  }
+  };
 
-  function setQuestionData(e) {
+  const setQuestionData = e => {
     e.preventDefault();
-    let result = e.target.innerText;
+    const result = e.target.innerText;
 
     const quiz = buttonsData.find(item => item.button === result);
 
     setData(quiz.data);
 
     showMessage();
-  }
+  };
 
-  function setContent() {
+  const setContent = () => {
     const content = (
       <MainPageContent
         quizButtons={buttonsData}
@@ -65,7 +65,7 @@ export default function WelcomePage() {
         {questions}
       </>
     );
-  }
+  };
 
   return <>{setContent()}</>;
 }

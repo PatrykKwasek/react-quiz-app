@@ -16,27 +16,27 @@ export default function Form({ categoriesData }) {
   const [welcomePage, setWelcomePage] = useState(false);
   const [questionCard, setQuestionCard] = useState(false);
 
-  function handleQuestionsNumber(e) {
+  const handleQuestionsNumber = e => {
     setQuestionNumber(e.target.value);
-  }
+  };
 
-  function handleCategory(e) {
+  const handleCategory = e => {
     setCategory(e.target.value);
-  }
+  };
 
-  function handleDifficulty(e) {
+  const handleDifficulty = e => {
     setDifficulty(e.target.value);
-  }
+  };
 
-  function showQuestionCard() {
+  const showQuestionCard = () => {
     changeStatement(true, setHideForm, setQuestionCard);
-  }
+  };
 
-  function showWelcomePage() {
+  const showWelcomePage = () => {
     changeStatement(true, setHideForm, setWelcomePage);
-  }
+  };
 
-  function formContent() {
+  const formContent = () => {
     const content = (
       <FormContent
         handleQuestionsNumber={handleQuestionsNumber}
@@ -68,7 +68,7 @@ export default function Form({ categoriesData }) {
         {question}
       </div>
     );
-  }
+  };
 
   return <>{formContent()}</>;
 }

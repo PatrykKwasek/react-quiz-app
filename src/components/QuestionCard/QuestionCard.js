@@ -9,6 +9,7 @@ import {
 } from '../../methods/methods';
 import { GetQuestions } from '../Api/getAPI';
 import Button from '../Button/Button';
+import Loader from '../Loader/Library/Loader';
 import UserResult from '../UserResult/UserResult';
 import WelcomePage from '../WelcomePage/WelcomePage';
 import QuestionCardContent from './QuestionCardContent';
@@ -31,10 +32,7 @@ export default function QuestionCard({
   const [hideQuestion, setHideQuestion] = useState(false);
   const [displayStatistics, setDisplayStatistics] = useState(false);
   const [displayWelcomeMessage, setDisplayWelcomeMessage] = useState(false);
-
-  useEffect(() => {
-    version ? loadExampleQuestion() : loadQuestions();
-  }, []);
+  const [loading, setLoading] = useState(true);
 
   const loadExampleQuestion = () => {
     const loadedExampleQuestions = version;
@@ -50,11 +48,17 @@ export default function QuestionCard({
       category,
       difficulty
     );
+
     setQuestionData(loadedQuestions);
     setQuestionsTable(
       shuffleAnswersTable(joinAnswers(loadedQuestions[activeIndex]))
     );
   };
+
+  useEffect(() => {
+    version ? loadExampleQuestion() : loadQuestions();
+    setLoading(false);
+  }, []);
 
   const checkAnswerCorrectness = () => {
     const checkAnswerCorrectness =
@@ -150,12 +154,12 @@ export default function QuestionCard({
         buttonClicked={buttonClicked}
         checkAnswer={checkAnswer}
         appropriateButton={appropriateButton}
-        showStartMenu={showStartMenu}
+        showMenu={showStartMenu}
       />
     );
 
     const welcomeMessage = displayWelcomeMessage ? <WelcomePage /> : '';
-    const message = hideQuestion ? '' : content;
+    const message = loading ? <Loader /> : hideQuestion ? '' : content;
     const question = displayStatistics ? (
       <UserResult
         result={quizResult}
@@ -182,9 +186,16 @@ export default function QuestionCard({
   return <>{questionData.length !== 0 && createQuestionsList(questionData)}</>;
 }
 
+QuestionCard.defaultProps = {
+  // version: [{}],
+  questionNumber: 10,
+  category: 0,
+  difficulty: 'medium',
+};
+
 QuestionCard.propTypes = {
   version: PropTypes.arrayOf(PropTypes.object),
-  // questionNumber: PropTypes.number,
-  // category: PropTypes.string,
-  // difficulty: PropTypes.string,
+  questionNumber: PropTypes.number,
+  category: PropTypes.number,
+  difficulty: PropTypes.string,
 };

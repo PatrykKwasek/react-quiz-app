@@ -14,11 +14,11 @@ export default function ShowQuestions({
 }) {
   const [hideStatistics, setHideStatistics] = useState(false);
 
-  function showMessage() {
+  const showMessage = () => {
     setHideStatistics(true);
-  }
+  };
 
-  function showAnswers() {
+  const showAnswers = () => {
     const content = (
       <UserAnswerContent
         questionData={questionData}
@@ -33,7 +33,7 @@ export default function ShowQuestions({
     const hideStats = hideStatistics ? <WelcomePage /> : content;
 
     return <>{hideStats}</>;
-  }
+  };
 
   return <>{showAnswers()}</>;
 }

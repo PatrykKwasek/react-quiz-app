@@ -20,42 +20,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdc8fdfa-e22d-4784-a0ad-e5151dcda388" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Button/Button.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Input/Input.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Label/Label.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/QuestionCard/QuestionCardContent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/QuizForm/FormContent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Select/Select.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UserAnswers/UserAnswersContent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UserResult/UserResultContent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/methods/methods.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Loader/Library/Loader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Loader/Mosh/Loader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Api/getAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Api/getAPI.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/QuestionCard/AnswersList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuestionCard/AnswersList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/QuestionCard/CreateAnswerButtons.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuestionCard/CreateAnswerButtons.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/QuestionCard/CreateButton.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/QuestionCard/CreateAnswerButtons.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/QuestionCard/QuestionCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuestionCard/QuestionCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/QuestionCard/methods.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/QuizForm/CreateCategorySelectTypeInput.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/QuizForm/CreateDifficultySelectTypeInput.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/QuizForm/CreateInputLabel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/QuizForm/CreateNumberTypeInput.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/QuestionCard/QuestionCardContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuestionCard/QuestionCardContent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/QuizForm/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuizForm/Form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UserAnswers/CheckAnswersCorrectness.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserAnswers/CheckAnswersCorrectness.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/QuizForm/FormContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuizForm/FormContent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/UserAnswers/ShowQuestions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserAnswers/ShowQuestions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UserAnswers/UserAnswers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserAnswers/UserAnswers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/UserResult/UserResult.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserResult/UserResult.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/WelcomePage/CreateButtonList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WelcomePage/CreateButtonList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/WelcomePage/MainPageContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WelcomePage/MainPageContent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/WelcomePage/WelcomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WelcomePage/WelcomePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/WelcomePage/buttonsData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WelcomePage/buttonsData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +88,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Magento/react-quiz-app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Magento/Prebooking/magento-prebooking" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -121,11 +103,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\React\react-quiz-app\src\components\Loader\Mosh" />
       <recent name="C:\React\react-projects\src\components\Rubbish" />
       <recent name="C:\React\react-projects\src\components" />
       <recent name="C:\React\react-projects\src\components\MainPage" />
       <recent name="C:\React\react-projects\src\components\fetch" />
-      <recent name="C:\React\react-projects\src\data\category\science\computers" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -188,7 +170,7 @@
       <workItem from="1596561329824" duration="2980000" />
       <workItem from="1596718260618" duration="92000" />
       <workItem from="1597832891850" duration="243000" />
-      <workItem from="1602280174324" duration="27941000" />
+      <workItem from="1602280174324" duration="40364000" />
     </task>
     <servers />
   </component>
@@ -218,11 +200,12 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680/2.-1080.1920.1040@0.0.1280.680" timestamp="1602375777225" />
-    <state x="493" y="172" key="FileChooserDialogImpl" timestamp="1602426574233">
+    <state x="493" y="172" key="FileChooserDialogImpl" timestamp="1602486548468">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="493" y="172" key="FileChooserDialogImpl/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1596388377130" />
     <state x="493" y="172" key="FileChooserDialogImpl/0.0.1280.680/2.-1080.1920.1040@0.0.1280.680" timestamp="1602426574233" />
+    <state x="493" y="172" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1602486548468" />
     <state width="1237" height="195" key="GridCell.Tab.0.bottom" timestamp="1602445123185">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -259,6 +242,11 @@
       <screen x="2" y="-1080" width="1920" height="1040" />
     </state>
     <state x="463" y="-915" key="SettingsEditor/0.0.1280.680/2.-1080.1920.1040@2.-1080.1920.1040" timestamp="1602369572326" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1602489219291">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1280.680/2.-1080.1920.1040@0.0.1280.680" timestamp="1602459154563" />
+    <state width="498" height="446" key="SwitcherDM/0.0.1280.680@0.0.1280.680" timestamp="1602489219291" />
     <state x="437" y="226" key="com.intellij.ide.util.TipDialog" timestamp="1596203726566">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -271,15 +259,15 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="347" y="73" width="587" height="534" key="find.popup/0.0.1280.680/2.-1080.1920.1040@0.0.1280.680" timestamp="1602452608192" />
-    <state x="75" y="513" key="run.anything.popup" timestamp="1602422378090">
+    <state x="75" y="513" key="run.anything.popup" timestamp="1602462274686">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="112" y="-296" key="run.anything.popup/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1593954708193" />
     <state x="75" y="513" key="run.anything.popup/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1596384172389" />
-    <state x="75" y="513" key="run.anything.popup/0.0.1280.680/2.-1080.1920.1040@0.0.1280.680" timestamp="1602422378090" />
-    <state x="303" y="1" key="search.everywhere.popup" timestamp="1602453855429">
+    <state x="75" y="513" key="run.anything.popup/0.0.1280.680/2.-1080.1920.1040@0.0.1280.680" timestamp="1602462274686" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1602461005035">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" key="search.everywhere.popup/0.0.1280.680/2.-1080.1920.1040@0.0.1280.680" timestamp="1602453855429" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680/2.-1080.1920.1040@0.0.1280.680" timestamp="1602461005035" />
   </component>
 </project>

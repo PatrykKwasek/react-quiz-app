@@ -12,7 +12,7 @@ export default function QuestionCardContent({
   buttonClicked,
   checkAnswer,
   appropriateButton,
-  showStartMenu,
+  showMenu,
 }) {
   return (
     <div key={`Create list-${activeIndex}`} className='question-card'>
@@ -37,7 +37,7 @@ export default function QuestionCardContent({
 
       <p className='back-to-menu'>
         <Button
-          onClick={showStartMenu}
+          onClick={showMenu}
           className='button-back-to-menu'
           txt='BACK TO MENU'
           type='button'
@@ -48,13 +48,13 @@ export default function QuestionCardContent({
 }
 
 QuestionCardContent.defaultProps = {
-  // activeIndex: 0,
+  activeIndex: 0,
   data: [{}],
   questionsTable: [''],
   buttonClicked: '',
   checkAnswer: () => {},
   // appropriateButton: '',
-  showStartMenu: () => {},
+  showMenu: () => {},
 };
 
 QuestionCardContent.propTypes = {
@@ -64,5 +64,5 @@ QuestionCardContent.propTypes = {
   buttonClicked: PropTypes.string,
   checkAnswer: PropTypes.func,
   // appropriateButton: PropTypes.objectOf(PropTypes.symbol),
-  showStartMenu: PropTypes.func,
+  showMenu: PropTypes.func,
 };

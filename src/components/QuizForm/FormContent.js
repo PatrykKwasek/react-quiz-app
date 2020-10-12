@@ -20,7 +20,11 @@ export default function FormContent({
       <p>
         <Label txt='Number of Questions: ' />
         <br />
-        <Input type='number' method={handleQuestionsNumber} defaultValue={10} />
+        <Input
+          type='number'
+          onChange={handleQuestionsNumber}
+          defaultValue={10}
+        />
       </p>
 
       <p>

@@ -22,8 +22,14 @@ export default function MainPageContent({
   );
 }
 
+MainPageContent.defaultProps = {
+  quizButtons: [{}],
+  showForm: () => {},
+  setQuestionData: () => {},
+};
+
 MainPageContent.propTypes = {
-  quizButtons: PropTypes.array,
+  quizButtons: PropTypes.arrayOf(PropTypes.object),
   showForm: PropTypes.func,
   setQuestionData: PropTypes.func,
 };

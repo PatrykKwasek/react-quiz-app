@@ -22,9 +22,6 @@ export const GetQuestions = (questionNumber, category, difficulty) => {
 
   return UploadAPI(host).then(data => {
     console.log('HOST', data.results);
-    console.log('questionNumber', questionNumber);
-    console.log('category', category);
-    console.log('difficulty', difficulty);
     questions.push(data.results);
 
     return questions[0];
